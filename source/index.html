@@ -2,11 +2,172 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>«Мишка» - магазин вязаных изделий ручной работы</title>
   </head>
   <body>
+    <header class="page-header">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-img" src="http://placehold.it/86x35" width="86" height="35" alt="«Мишка»">
+          </a>
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__site-menu site-menu">
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="order.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__user-menu user-menu">
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#">
+                <svg class="user-menu__icon" width="18" height="18" focusable="false" aria-hidden="true">
+                  <use xlink:href="#search-icon"/>
+                </svg>
+                <span class="user-menu__hidden-text">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#">
+                <svg class="user-menu__icon" width="21" height="18" focusable="false" aria-hidden="true">
+                  <use xlink:href="#basket-icon"/>
+                </svg>
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__site-submenu site-submenu">
+            <li class="site-submenu__item">
+              <a class="site-submenu__link" href="#">Новые поступления</a>
+            </li>
+            <li class="site-submenu__item">
+              <a class="site-submenu__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
+        </nav>
+      </div>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main class="page-main">
+      <h1 class="visually-hidden">«Мишка» - магазин вязаных изделий ручной работы для дома</h1>
+
+      <section class="product-categories">
+        <div class="container">
+          <h2 class="visually-hidden">Категории товаров</h2>
+          <p class="product-categories__lead-text">Милые штуки ручной<br>работы для дома</p>
+          <ul class="product-categories__list">
+            <li class="product-categories__item">
+              <a class="product-categories__link" href="#">
+                <span class="product-categories__text">Предметы интерьера</span>
+                <svg class="product-categories__icon" width="40" height="62" focusable="false" aria-hidden="true">
+                  <use xlink:href="#interior-icon"/>
+                </svg>
+              </a>
+            </li>
+            <li class="product-categories__item">
+              <a class="product-categories__link" href="#">
+                <span class="product-categories__text">Детские игрушки</span>
+                <svg class="product-categories__icon" width="60" height="60" focusable="false" aria-hidden="true">
+                  <use xlink:href="#toy-icon"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="container">
+          <div class="promo__header">
+            <h2 class="promo__title">Товар недели</h2>
+            <h3 class="promo__product-title">Вязаные корзинки</h3>
+          </div>
+          <div class="promo__content">
+            <p class="promo__product-features">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="promo__product-parameters">
+              <tr>
+                <td class="promo__product-field">Цвет:</td>
+                <td class="promo__product-value">«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <td class="promo__product-field">Диаметр:</td>
+                <td class="promo__product-value">25 см</td>
+              </tr>
+              <tr>
+                <td class="promo__product-field">Высота:</td>
+                <td class="promo__product-value">15 см</td>
+              </tr>
+            </table>
+            <img class="promo__product-photo" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+            <p class="promo__buy">
+              <span class="promo__product-price">Цена: 990 руб.</span>
+              <a class="promo__buy-btn btn" href="#">Заказать</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="container">
+          <h2 class="advantages__title">Коротко о нас:</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
+            <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
+            <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
+            <li class="advantages__item advantages__item--handmade">Связано вручную с любовью и умилением</li>
+            <li class="advantages__item advantages__item--domestic">Поддержка отечественного производителя</li>
+            <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <a class="page-footer__logo">
+          <svg class="page-footer__logo-img" width="86" height="35" focusable="false" aria-label="Логотип «Мишка». Переход на главную страницу">
+            <use xlink:href="#interior-icon"/>
+          </svg>
+        </a>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon" width="22" height="21" focusable="false" aria-hidden="true">
+                <use xlink:href="#in-icon"/>
+              </svg>
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon" width="15" height="28" focusable="false" aria-hidden="true">
+                <use xlink:href="#fb-icon"/>
+              </svg>
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon" width="23" height="20" focusable="false" aria-hidden="true">
+                <use xlink:href="#tw-icon"/>
+              </svg>
+              <span class="visually-hidden">Мы в Твиттере</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__logo-img" width="27" height="34"  focusable="false" aria-label="Логотип «HTMLacademy». Переход на страницу профессионального онлайн‑курса HTML и CSS, уровень 2">
+              <use xlink:href="#academy-logo"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
