@@ -230,5 +230,31 @@
       </div>
     </footer>
 
+    <div class="modal-overlay"> <!-- modal-overlay--show -->
+      <section class="basket-add" role="dialog" aria-labelledby="basket-add-label" aria-describedby="basket-add-description">
+        <h2 class="basket-add__title" id="basket-add-label">Добавить в корзину</h2>
+        <p class="basket-add__description" id="basket-add-description">Выберите размер:</p>
+        <form class="basket-add-form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="basket-add-form__options-list">
+            <label class="basket-add-form__options-item">
+              <input class="visually-hidden" type="checkbox" name="size" value="S" checked>
+              <span class="basket-add-form__option">S</span>
+            </label>
+            <label class="basket-add-form__options-item">
+              <input class="visually-hidden" type="checkbox" name="size" value="M">
+              <span class="basket-add-form__option">M</span>
+            </label>
+            <label class="basket-add-form__options-item">
+              <input class="visually-hidden" type="checkbox" name="size" value="L">
+              <span class="basket-add-form__option">L</span>
+            </label>
+          </div>
+          <button class="basket-add-form__submit-btn btn" type="submit">Добавить</button>
+          <!-- кнопка "закрыть" для доступности -->
+          <button class="basket-add-form__close-btn visually-hidden visually-hidden-focusable" type="button" aria-label="Закрыть"></button>
+        </form>
+      </section>
+    </div>
+
   </body>
 </html>
