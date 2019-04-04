@@ -63,9 +63,8 @@
           <h2 class="visually-hidden">Форма заказа</h2>
           <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">Тип</legend>
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">Тип</legend>
               <div class="order-form__options-list">
                 <label class="order-form__options-item">
                   <input class="visually-hidden" type="radio" name="category" value="interior" checked>
@@ -77,10 +76,9 @@
                 </label>
               </div>
             </fieldset>
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">Цвет</legend>
-              <div class="order-form__options-list">
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">Цвет</legend>
+              <div class="order-form__options-list order-form__options-list--col">
                 <label class="order-form__options-item">
                   <input class="visually-hidden" type="checkbox" name="color" value="white" checked>
                   <span class="order-form__option order-form__option--checkbox">Белый</span>
@@ -107,55 +105,46 @@
                 </label>
               </div>
             </fieldset>
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">ФИО</legend>
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">ФИО</legend>
               <div class="order-form__options-list">
                 <label class="order-form__options-item">
-                  <span class="order-form__label">Имя:</span>
+                  <span class="order-form__subtitle">Имя:</span>
                   <input class="order-form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
                 </label>
-              </div>
-              <div class="order-form__options-list">
                 <label class="order-form__options-item">
-                  <span class="order-form__label">Фамилия:</span>
+                  <span class="order-form__subtitle">Фамилия:</span>
                   <input class="order-form__input" type="text" name="surname" placeholder="Укажите фамилию*" required>
                 </label>
-              </div>
-              <div class="order-form__options-list">
                 <label class="order-form__options-item">
-                  <span class="order-form__label">Отчество:</span>
+                  <span class="order-form__subtitle">Отчество:</span>
                   <input class="order-form__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
                 </label>
               </div>
             </fieldset>
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">Тел</legend>
-              <div class="order-form__input-wrapper">
-                <input class="order-form__input order-form__input--icon" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                <svg class="order-form__input-icon" width="25" height="24"  focusable="false" aria-hidden="true">
+            <div class="order-form__group">
+              <label class="order-form__title" for="tel-field" aria-label="Телефон">Тел</label>
+              <div class="order-form__field">
+                <input class="order-form__input order-form__input--icon" type="tel" name="phone" id="tel-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="order-form__icon" width="25" height="24"  focusable="false" aria-hidden="true">
                   <use xlink:href="#phone-icon"/>
                 </svg>
               </div>
-            </fieldset>
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">E-mail</legend>
-              <div class="order-form__input-wrapper">
-                <input class="order-form__input order-form__input--icon" type="email" name="email" placeholder="Ваш Email*" required>
-                <svg class="order-form__input-icon" width="25" height="24"  focusable="false" aria-hidden="true">
+            </div>
+            <div class="order-form__group">
+              <label class="order-form__title" for="email-field">E-mail</label>
+              <div class="order-form__field">
+                <input class="order-form__input order-form__input--icon" type="email" name="email" id="email-field" placeholder="Ваш Email*" required>
+                <svg class="order-form__icon" width="25" height="24"  focusable="false" aria-hidden="true">
                   <use xlink:href="#email-icon"/>
                 </svg>
               </div>
-            </fieldset>
-
-            <fieldset class="order-form__section">
-              <legend class="order-form__section-legend">Доп</legend>
-              <textarea class="order-form__input order-form__input--textarea" name="message" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
-            </fieldset>
-
-            <div class="order-form__submit-section">
+            </div>
+            <div class="order-form__group">
+              <label class="order-form__title" for="message-field" aria-label="Дополнительная информация">Доп</label>
+              <textarea class="order-form__input order-form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
+            </div>
+            <div class="order-form__submit">
               <span class="order-form__remark">*Поля обязательны для заполнения</span>
               <button class="order-form__submit-btn btn" type="submit">Отправить заказ</button>
             </div>
