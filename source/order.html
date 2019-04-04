@@ -11,7 +11,9 @@
           <a class="main-nav__logo" href="index.html">
             <img class="main-nav__logo-img" src="http://placehold.it/86x35" width="86" height="35" alt="«Мишка». Переход на главную страницу">
           </a>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__site-menu site-menu">
             <li class="site-menu__item">
               <a class="site-menu__link"  href="catalog.html">Каталог товаров</a>
@@ -52,14 +54,101 @@
     </header>
 
     <main class="page-main">
-      <div class="page-main__header">
-        <h1 class="page-main__title">Вязание на заказ</h1>
-      </div>
-
       <div class="container">
+        <div class="page-main__header">
+          <h1 class="page-main__title">Вязание на заказ</h1>
+        </div>
+
         <section class="order">
           <h2 class="visually-hidden">Форма заказа</h2>
           <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">Тип</legend>
+              <div class="order-form__options-list">
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="radio" name="category" value="interior" checked>
+                  <span class="order-form__option order-form__option--radio">Аксессуар для интерьера</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="radio" name="category" value="toy">
+                  <span class="order-form__option order-form__option--radio">Детская игрушка</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">Цвет</legend>
+              <div class="order-form__options-list order-form__options-list--col">
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="white" checked>
+                  <span class="order-form__option order-form__option--checkbox">Белый</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="gray" checked>
+                  <span class="order-form__option order-form__option--checkbox">Серый</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="tiffany">
+                  <span class="order-form__option order-form__option--checkbox">«Тиффани»</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="black">
+                  <span class="order-form__option order-form__option--checkbox">Черный</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="pink">
+                  <span class="order-form__option order-form__option--checkbox">Розовый</span>
+                </label>
+                <label class="order-form__options-item">
+                  <input class="visually-hidden" type="checkbox" name="color" value="orange">
+                  <span class="order-form__option order-form__option--checkbox">Оранжевый</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__group">
+              <legend class="order-form__title">ФИО</legend>
+              <div class="order-form__options-list">
+                <label class="order-form__options-item">
+                  <span class="order-form__subtitle">Имя:</span>
+                  <input class="order-form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
+                </label>
+                <label class="order-form__options-item">
+                  <span class="order-form__subtitle">Фамилия:</span>
+                  <input class="order-form__input" type="text" name="surname" placeholder="Укажите фамилию*" required>
+                </label>
+                <label class="order-form__options-item">
+                  <span class="order-form__subtitle">Отчество:</span>
+                  <input class="order-form__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
+                </label>
+              </div>
+            </fieldset>
+            <div class="order-form__group">
+              <label class="order-form__title" for="tel-field" aria-label="Телефон">Тел</label>
+              <div class="order-form__field">
+                <input class="order-form__input order-form__input--icon" type="tel" name="phone" id="tel-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="order-form__icon" width="25" height="24"  focusable="false" aria-hidden="true">
+                  <use xlink:href="#phone-icon"/>
+                </svg>
+              </div>
+            </div>
+            <div class="order-form__group">
+              <label class="order-form__title" for="email-field">E-mail</label>
+              <div class="order-form__field">
+                <input class="order-form__input order-form__input--icon" type="email" name="email" id="email-field" placeholder="Ваш Email*" required>
+                <svg class="order-form__icon" width="25" height="24"  focusable="false" aria-hidden="true">
+                  <use xlink:href="#email-icon"/>
+                </svg>
+              </div>
+            </div>
+            <div class="order-form__group">
+              <label class="order-form__title" for="message-field" aria-label="Дополнительная информация">Доп</label>
+              <textarea class="order-form__input order-form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
+            </div>
+            <div class="order-form__submit">
+              <span class="order-form__remark">*Поля обязательны для заполнения</span>
+              <button class="order-form__submit-btn btn" type="submit">Отправить заказ</button>
+            </div>
+          </form>
         </section>
       </div>
     </main>
