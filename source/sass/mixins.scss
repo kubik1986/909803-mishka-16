@@ -1,0 +1,17 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link($color: #000000) {
+  color: $color;
+
+  &:hover {
+    color: rgba($color, 0.6);
+  }
+
+  &:active {
+    color: rgba($color, 0.3);
+  }
+}
