@@ -1,3 +1,5 @@
-.promo {
-  @include zigzag-separator;
+.promo__product {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 }

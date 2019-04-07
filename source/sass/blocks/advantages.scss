@@ -5,13 +5,6 @@
   color: $font-color-dark;
 }
 
-.advantages__title {
-  margin-bottom: 30px;
-
-  font-size: 25px;
-  line-height: 30px;
-}
-
 .advantages__list {
   @include list-reset;
 }

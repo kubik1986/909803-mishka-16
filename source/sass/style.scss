@@ -5,13 +5,15 @@
 @import "general/global.scss";
 @import "gui/buttons.scss";
 @import "gui/form-fields.scss";
+@import "blocks/common/visually-hidden.scss";
+@import "blocks/common/section.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-menu.scss";
 @import "blocks/user-menu.scss";
 @import "blocks/site-submenu.scss";
 @import "blocks/page-main.scss";
-@import "blocks/product-categories.scss";
+@import "blocks/categories.scss";
 @import "blocks/category.scss";
 @import "blocks/promo.scss";
 @import "blocks/product-full.scss";
