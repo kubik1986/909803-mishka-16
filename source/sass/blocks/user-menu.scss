@@ -1,0 +1,55 @@
+.user-menu {
+  @include list-reset;
+}
+
+.user-menu__item {
+  padding: 25px 40px 25px 75px;
+  min-height: 80px;
+  box-sizing: border-box;
+
+  box-shadow: inset 0 -1px 0 0 $theme-color-complementary-light;
+}
+
+.user-menu__link {
+  position: relative;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @include link($font-color-dark);
+
+  &:hover,
+  &:focus {
+    .user-menu__icon {
+      fill: $theme-color-main;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .user-menu__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &--current {
+    &:hover,
+    &:active {
+      color: $font-color-dark;
+
+      .user-menu__icon {
+        fill: #000000;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.user-menu__icon {
+  position: absolute;
+  top: 3px;
+  left: -45px;
+
+  opacity: 0.2;
+}

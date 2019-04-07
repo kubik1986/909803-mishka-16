@@ -1,0 +1,32 @@
+.page-footer {
+  background-color: $theme-bg-color-secondary;
+}
+
+.page-footer__logo {
+  display: none;
+  width: 86px;
+  height: 35px;
+
+  &:hover,
+  &:focus {
+    .page-footer__logo-img {
+      fill: $theme-color-secondary-bright;
+    }
+  }
+
+  &:active {
+    .page-footer__logo-img {
+      opacity: 0.3;
+    }
+  }
+
+  &:not([href]) {
+    &:hover,
+    &:active {
+      .page-footer__logo-img {
+        fill: #000000;
+        opacity: 1;
+      }
+    }
+  }
+}

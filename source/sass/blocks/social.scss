@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  @include list-reset;
+}
+
+.social__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    .social__icon {
+      fill: $theme-color-secondary-bright;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      opacity: 0.3;
+    }
+  }
+}

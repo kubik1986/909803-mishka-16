@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 14px 50px;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $font-color;
+
+  border: 2px solid $font-color;
+  background-color: $theme-bg-color-main;
+
+  &:hover,
+  &:focus {
+    color: $font-color-light;
+    background-color: $font-color;
+  }
+
+  &:active {
+    color: rgba($font-color-light, 0.3);
+  }
+}

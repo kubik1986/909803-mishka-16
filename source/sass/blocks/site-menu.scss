@@ -1,0 +1,26 @@
+.site-menu {
+  @include list-reset;
+}
+
+.site-menu__item {
+  padding: 25px 40px 25px 75px;
+  min-height: 80px;
+  box-sizing: border-box;
+
+  box-shadow: inset 0 -1px 0 0 $theme-color-complementary-light;
+}
+
+.site-menu__link {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @include link($font-color-dark);
+
+  &--current {
+    &:hover,
+    &:active {
+      color: $font-color-dark;
+    }
+  }
+}

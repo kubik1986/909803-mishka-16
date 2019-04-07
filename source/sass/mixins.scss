@@ -7,11 +7,25 @@
 @mixin link($color: #000000) {
   color: $color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgba($color, 0.6);
   }
 
   &:active {
     color: rgba($color, 0.3);
+  }
+}
+
+@mixin zigzag-separator($height: 6px) {
+  &::after {
+    display: block;
+    width: 100%;
+    height: $height;
+    content: "";
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
   }
 }
