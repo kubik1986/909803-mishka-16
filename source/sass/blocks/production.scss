@@ -1,1 +1,59 @@
-// Заглушка
+.production {
+  padding-top: 0;
+
+  @include font(13px, 24px, 400);
+  color: $font-color;
+}
+
+.production__wrapper {
+  box-shadow: inset 0 0 0 1px $theme-color-complementary-light;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.production__top {
+  display: flex;
+  align-items: center;
+
+  padding: 25px 34px 23px;
+}
+
+.production__icon {
+  flex-shrink: 0;
+
+  margin-right: 25px;
+
+  fill: $theme-color-main;
+}
+
+.production__title {
+  margin: 0;
+
+  @include font(17px, 24px, 700);
+  color: $font-color-dark;
+}
+
+.production__video {
+  padding-bottom: 57.69%; // video 260x150
+}
+
+.production__bottom {
+  padding: 30px 34px 32px;
+}
+
+.production__description {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.production__order-btn {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
