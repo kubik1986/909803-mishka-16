@@ -61,9 +61,7 @@
 .category__text {
   width: 160px;
 
-  font-size: 19px;
-  line-height: 24px;
-  font-weight: 700;
+  @include font(19px, 24px, 700);
   color: $font-color-light;
 }
 

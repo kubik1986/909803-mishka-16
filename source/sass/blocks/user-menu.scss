@@ -13,10 +13,7 @@
 .user-menu__link {
   position: relative;
 
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-
+  @include font(17px, 24px, 700);
   @include link($font-color-dark);
 
   &:hover,

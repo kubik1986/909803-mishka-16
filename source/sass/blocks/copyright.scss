@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
 
-  font-size: 19px;
-  line-height: 19px;
-  font-weight: 700;
+  @include font(19px, 19px, 700);
   color: $font-color-dark;
 }
 

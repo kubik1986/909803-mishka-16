@@ -1,10 +1,13 @@
+.product-full {
+  @include font(15px, 24px, 400);
+  color: $font-color;
+}
+
 .product-full__title {
   margin: 0;
   margin-bottom: 4px;
 
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 700;
+  @include font(25px, 30px, 700);
   color: $font-color-dark;
 }
 
@@ -12,9 +15,7 @@
   display: block;
   margin-bottom: 25px;
 
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
+  @include font(17px, 20px, 700);
   text-transform: uppercase;
   color: $theme-color-main;
 }
@@ -22,8 +23,6 @@
 .product-full__features {
   margin: 0;
   margin-bottom: 25px;
-
-  line-height: 24px;
 }
 
 .product-full__parameters {
@@ -42,9 +41,7 @@
   display: block;
   margin-bottom: 25px;
 
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
+  @include font(17px, 24px, 700);
   text-align: center;
   color: $font-color-dark;
 }

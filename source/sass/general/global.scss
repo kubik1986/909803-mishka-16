@@ -3,9 +3,8 @@ body {
   padding: 0;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 400;
+
+  @include font(15px, 30px, 400);
   color: $font-color;
 
   background-color: $theme-bg-color-main;

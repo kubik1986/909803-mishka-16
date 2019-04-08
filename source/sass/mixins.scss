@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@mixin font($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
 @mixin link($color: #000000) {
   color: $color;
 

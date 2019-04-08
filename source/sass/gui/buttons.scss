@@ -3,9 +3,7 @@
   vertical-align: middle;
   padding: 14px 50px;
 
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
+  @include font(18px, 20px, 700);
   text-align: center;
   text-transform: uppercase;
   color: $font-color;

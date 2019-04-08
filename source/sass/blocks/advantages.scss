@@ -1,7 +1,5 @@
 .advantages {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
+  @include font(17px, 20px, 700);
   color: $font-color-dark;
 }
 
