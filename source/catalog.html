@@ -133,21 +133,25 @@
 
       <section class="production section">
         <div class="container">
-          <div class="production__header">
-            <svg class="production__icon" width="32" height="22" focusable="false" aria-hidden="true">
-              <rect width="32" height="22"/>
-              <use xlink:href="#video-icon"/>
-            </svg>
-            <h2 class="production__title">Процесс производства</h2>
+          <div class="production__wrapper">
+            <div class="production__top">
+              <svg class="production__icon" width="32" height="22" focusable="false" aria-hidden="true">
+                <rect width="32" height="22"/>
+                <use xlink:href="#video-icon"/>
+              </svg>
+              <h2 class="production__title">Процесс производства</h2>
+            </div>
+            <div class="production__video video">
+              <img class="video__media" src="img/video-mobile@1x.jpg" alt="Процесс производства" >
+              <button class="video__btn" type="button">
+                <span class="visually-hidden">Запустить видео</span>
+              </button>
+            </div>
+            <div class="production__bottom">
+              <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="production__order-btn btn" href="#">Сделать заказ</a>
+            </div>
           </div>
-          <div class="production__video video">
-            <video class="video__frame" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
-            <button class="video__btn" type="button">
-              <span class="visually-hidden">Запустить видео</span>
-            </button>
-          </div>
-          <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="production__order-btn btn" href="#">Сделать заказ</a>
         </div>
       </section>
     </main>
