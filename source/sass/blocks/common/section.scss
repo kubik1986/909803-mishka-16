@@ -1,0 +1,33 @@
+.section {
+  position: relative;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &--separator {
+    padding-bottom: 36px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      display: block;
+      width: 100%;
+      height: 6px;
+      content: "";
+
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font(25px, 30px, 700);
+  color: $font-color-dark;
+}

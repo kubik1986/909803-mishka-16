@@ -1,0 +1,24 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin link($color: #000000) {
+  color: $color;
+
+  &:hover,
+  &:focus {
+    color: rgba($color, 0.6);
+  }
+
+  &:active {
+    color: rgba($color, 0.3);
+  }
+}

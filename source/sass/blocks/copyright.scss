@@ -1,0 +1,32 @@
+.copyright {
+  display: flex;
+  align-items: center;
+
+  @include font(19px, 19px, 700);
+  color: $font-color-dark;
+}
+
+.copyright__text {
+  margin-right: 30px;
+}
+
+.copyright__logo {
+  display: block;
+  width: 27px;
+  height: 34px;
+
+  fill: $theme-color-main;
+
+  &:hover,
+  &:focus {
+    .copyright__logo-img {
+      fill: $theme-color-secondary-bright;
+    }
+  }
+
+  &:active {
+    .copyright__logo-img {
+      opacity: 0.3;
+    }
+  }
+}

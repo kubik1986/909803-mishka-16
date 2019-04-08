@@ -1,0 +1,25 @@
+.advantages {
+  @include font(17px, 20px, 700);
+  color: $font-color-dark;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__item {
+  position: relative;
+
+  margin-bottom: 30px;
+  padding-top: 50px;
+}
+
+.advantages__icon {
+  position: absolute;
+  top: -50px;
+  left: 0;
+
+  padding-top: 50px;
+
+  fill: $theme-color-main;
+}
