@@ -1,4 +1,7 @@
 .product {
+  display: flex;
+  flex-direction: column;
+
   font-size: 13px;
   line-height: 30px;
 
@@ -18,8 +21,6 @@
 }
 
 .product__photo {
-  display: block;
-
   font-size: 0;
   line-height: 0;
 }
