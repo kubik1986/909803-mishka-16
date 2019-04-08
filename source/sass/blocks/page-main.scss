@@ -14,13 +14,13 @@
 
     .page-main__title {
       margin-bottom: 120px;
+      padding: 0 30px;
     }
   }
 }
 
 .page-main__title {
   margin: 0;
-  padding: 0 30px;
 
   @include font(27px, 30px, 700);
   text-align: center;
