@@ -10,11 +10,10 @@
 .advantages__item {
   position: relative;
 
-  margin-bottom: 30px;
   padding-top: 50px;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
