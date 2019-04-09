@@ -2,7 +2,8 @@
   margin: 0 auto;
   padding: 0 30px;
 
-  &--no-padding {
+  &--no-padding,
+  &--mobile-no-padding {
     padding: 0;
   }
 }
