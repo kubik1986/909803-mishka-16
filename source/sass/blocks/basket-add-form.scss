@@ -1,1 +1,47 @@
-// Заглушка
+.basket-add {
+  position: relative;
+
+  padding: 30px 30px 46px;
+  width: 320px;
+  box-sizing: border-box;
+
+  text-align: center;
+  color: $font-color;
+
+  background-color: $theme-bg-color-main;
+  box-shadow: inset 0 0 0 1px $theme-color-complementary,
+    0 5px 10px 0 rgba(0, 1, 1, 0.25);
+
+  & .basket-add-form__close-btn {  // специфичность повышена для правильной работы доступного скрытия/отображения при фокусе
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-menu-close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.basket-add__title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0 55px;
+
+  @include font(25px, 30px, 700);
+  text-transform: uppercase;
+  color: $font-color-dark;
+}
+
+.basket-add__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 17px;
+  line-height: 30px;
+}

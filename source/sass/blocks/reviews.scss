@@ -1,1 +1,94 @@
-// Заглушка
+.reviews {
+  @include font(15px, 30px, 400);
+  color: $font-color;
+}
+
+.reviews__list {
+  @include list-reset;
+  margin-bottom: 30px;
+}
+
+.reviews__item {
+  display: none;
+  margin: 0;
+
+  &--current {
+    display: block;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.reviews__author-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include font(17px, 24px, 700);
+  color: $font-color-dark;
+}
+
+.reviews__author-link {
+  @include font(17px, 30px, 400);
+  @include link($font-color);
+}
+
+.reviews__controls {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.reviews__btn {
+  flex-basis: 50%;
+
+  padding: 0;
+  min-height: 50px;
+
+  border: 1px solid $theme-color-complementary-light;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--prev {
+    border-right: none;
+
+    &::before {
+      background-image: url("../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--next {
+    &::before {
+      background-image: url("../img/icon-right-arrow.svg");
+    }
+  }
+}
+
+.reviews__write-btn {
+  display: block;
+}

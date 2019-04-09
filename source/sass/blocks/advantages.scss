@@ -12,6 +12,10 @@
 
   margin-bottom: 30px;
   padding-top: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__icon {

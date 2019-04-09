@@ -1,1 +1,21 @@
-// Заглушка
+.order {
+  @include font(13px, 24px, 400);
+  color: $font-color;
+}
+
+.order__intro {
+  margin: 0;
+}
+
+.order-form__submit {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 17px;
+}
+
+.order-form__remark {
+  margin-bottom: 30px;
+
+  @include font(14px, 16px, 400);
+}

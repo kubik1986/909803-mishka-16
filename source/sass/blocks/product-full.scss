@@ -37,6 +37,16 @@
   border-bottom: 1px solid $theme-color-complementary-light;
 }
 
+.product-full__photo {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  height: auto;
+
+  font-size: 0;
+  line-height: 0;
+}
+
 .product-full__price {
   display: block;
   margin-bottom: 25px;
