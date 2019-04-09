@@ -1,1 +1,40 @@
-// Заглушка
+.basket-add-form__options-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -7px;
+  margin-bottom: 15px;
+
+  @include font(17px, 16px, 700);
+  text-transform: uppercase;
+  color: $font-color;
+}
+
+.basket-add-form__options-item {
+  position: relative;
+
+  margin-left: 7px;
+  margin-bottom: 15px;
+  padding: 18px;
+  width: 46px;
+}
+
+.basket-add-form__option {
+  display: block;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: inset 0 0 0 2px rgba($theme-color-complementary-dark, 0.1);
+  }
+}
+
+.basket-add-form__submit-btn {
+  width: 100%;
+}

@@ -5,6 +5,7 @@
 @import "general/global.scss";
 @import "gui/buttons.scss";
 @import "gui/form.scss";
+@import "gui/modal-overlay.scss";
 @import "blocks/common/visually-hidden.scss";
 @import "blocks/common/section.scss";
 @import "blocks/common/container.scss";
@@ -29,3 +30,5 @@
 @import "blocks/production.scss";
 @import "blocks/video.scss";
 @import "blocks/order.scss";
+@import "blocks/basket-add.scss";
+@import "blocks/basket-add-form.scss";

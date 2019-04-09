@@ -21,4 +21,19 @@
   &:active {
     color: rgba($font-color-light, 0.3);
   }
+
+  &--solid {
+    padding: 18px 50px;
+
+    @include font(17px, 16px, 700);
+    color: $font-color-light;
+
+    border: none;
+    background-color: $theme-color-main;
+
+    &:hover,
+    &:focus {
+      background-color: $theme-color-main-bright;
+    }
+  }
 }
