@@ -70,9 +70,11 @@
         <div class="container">
           <h2 class="visually-hidden">Форма заказа</h2>
           <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          <form class="order-form form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form__group">
-              <legend class="form__title">Тип</legend>
+        </div>
+        <form class="order-form form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="form__wrapper">
+            <div class="form__group container" role="group" aria-labelledby="type-group-title">
+              <span class="form__title" id="type-group-title">Тип</span>
               <div class="form__options-list">
                 <label class="form__options-item">
                   <input class="visually-hidden" type="radio" name="category" value="interior" checked>
@@ -83,9 +85,11 @@
                   <span class="form__option form__option--radio">Детская игрушка</span>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="form__group">
-              <legend class="form__title">Цвет</legend>
+            </div>
+          </div>
+          <div class="form__wrapper">
+            <div class="form__group container" role="group" aria-labelledby="color-group-title">
+              <span class="form__title" id="color-group-title">Цвет</span>
               <div class="form__options-list form__options-list--col">
                 <label class="form__options-item">
                   <input class="visually-hidden" type="checkbox" name="color" value="white" checked>
@@ -112,9 +116,11 @@
                   <span class="form__option form__option--checkbox">Оранжевый</span>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="form__group">
-              <legend class="form__title">ФИО</legend>
+            </div>
+          </div>
+          <div class="form__wrapper">
+            <div class="form__group container" role="group" aria-labelledby="name-group-title">
+              <span class="form__title" id="name-group-title">ФИО</span>
               <div class="form__options-list">
                 <label class="form__options-item">
                   <span class="form__subtitle">Имя:</span>
@@ -129,8 +135,10 @@
                   <input class="form__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
                 </label>
               </div>
-            </fieldset>
-            <div class="form__group">
+            </div>
+          </div>
+          <div class="form__wrapper">
+            <div class="form__group container">
               <label class="form__title" for="tel-field" aria-label="Телефон">Тел</label>
               <div class="form__field">
                 <input class="form__input form__input--icon" type="tel" name="phone" id="tel-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
@@ -140,7 +148,7 @@
                 </svg>
               </div>
             </div>
-            <div class="form__group">
+            <div class="form__group container">
               <label class="form__title" for="email-field">E-mail</label>
               <div class="form__field">
                 <input class="form__input form__input--icon" type="email" name="email" id="email-field" placeholder="Ваш Email*" required>
@@ -150,16 +158,18 @@
                 </svg>
               </div>
             </div>
-            <div class="form__group">
+          </div>
+          <div class="form__wrapper">
+            <div class="form__group container">
               <label class="form__title" for="message-field" aria-label="Дополнительная информация">Доп</label>
               <textarea class="form__input form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
             </div>
-            <div class="order-form__submit">
+            <div class="order-form__submit container">
               <span class="order-form__remark">*Поля обязательны для заполнения</span>
               <button class="order-form__submit-btn btn" type="submit">Отправить заказ</button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
 
