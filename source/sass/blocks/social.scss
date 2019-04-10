@@ -2,10 +2,15 @@
   display: flex;
   align-items: center;
 
-  @include list-reset;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .social__item {
+  margin-top: 5px;
+
   &:not(:last-child) {
     margin-right: 40px;
   }
