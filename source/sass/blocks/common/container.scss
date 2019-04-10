@@ -1,9 +1,29 @@
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 $padding-mobile;
 
   &--no-padding,
   &--mobile-no-padding {
     padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding: 0 $padding-tablet;
+
+    &--no-padding {
+      padding: 0;
+    }
+
+    &--mobile-no-padding {
+      padding: 0 $padding-tablet;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width - $padding-desktop;
   }
 }
