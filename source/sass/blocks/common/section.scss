@@ -31,3 +31,47 @@
   @include font(25px, 30px, 700);
   color: $font-color-dark;
 }
+
+@media (min-width: $tablet-width) {
+  .section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    &--separator {
+      padding-bottom: 70px;
+
+      &::after {
+        height: 15px;
+      }
+    }
+  }
+
+  .section__title {
+    margin-bottom: 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    &--separator {
+      padding-bottom: 88px;
+
+      &::after {
+        height: 23px;
+      }
+    }
+  }
+
+  .section__title {
+    margin-bottom: 62px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
