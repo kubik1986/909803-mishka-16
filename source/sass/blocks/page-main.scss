@@ -31,7 +31,7 @@
 @media (min-width: $tablet-width) {
   .page-main__header {
     padding-top: 50px;
-    min-height: 75px;
+    min-height: 125px;
 
     &--index {
       padding-top: 110px;
@@ -69,7 +69,7 @@
 
 @media (min-width: $desktop-width) {
   .page-main__header {
-    min-height: 105px;
+    min-height: 155px;
 
     &--index {
       .page-main__title {
