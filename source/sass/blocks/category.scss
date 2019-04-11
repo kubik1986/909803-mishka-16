@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $tablet-width - 1px) {
   .category {
     &:nth-child(even) {
       .category__link {
