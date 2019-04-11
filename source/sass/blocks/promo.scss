@@ -3,3 +3,11 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .promo__product {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+}
