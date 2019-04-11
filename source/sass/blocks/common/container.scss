@@ -1,6 +1,7 @@
 .container {
   margin: 0 auto;
   padding: 0 $padding-mobile;
+  box-sizing: border-box;
 
   &--no-padding,
   &--mobile-no-padding {
@@ -24,6 +25,10 @@
 
 @media (min-width: $desktop-width) {
   .container {
-    width: $desktop-width - $padding-desktop * 2;
+    width: $desktop-width;
+
+    &--narrow {
+      padding-left: $padding-desktop-big;
+    }
   }
 }
