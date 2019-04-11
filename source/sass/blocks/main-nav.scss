@@ -151,7 +151,6 @@
     width: 80%;
   }
 
-
   .main-nav__delivery-text {
     position: relative;
 
@@ -191,6 +190,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    justify-content: flex-start;
+  }
+
   .main-nav__header {
     margin-top: 9px;
     width: 14.19%;  // 149px
@@ -217,7 +220,6 @@
       background-color: transparent;
     }
   }
-
 
   .main-nav__user-menu {
     width: 42.95%;  // 451px
