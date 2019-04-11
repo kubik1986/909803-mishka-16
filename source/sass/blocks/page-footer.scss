@@ -51,3 +51,33 @@
     padding-bottom: 18px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 145px;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-right: 85px;
+  }
+
+  .page-footer__item {
+    padding: 0;
+    min-height: auto;
+
+    &:not(:last-child) {
+      box-shadow: none;
+    }
+
+    &--social {
+      padding-bottom: 0;
+    }
+  }
+}
