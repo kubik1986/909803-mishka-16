@@ -18,7 +18,7 @@
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <ul class="main-nav__site-menu site-menu">
+          <ul class="main-nav__site-menu  main-nav__site-menu--index site-menu">
             <li class="site-menu__item">
               <a class="site-menu__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -28,7 +28,7 @@
           </ul>
           <ul class="main-nav__user-menu user-menu">
             <li class="user-menu__item">
-              <a class="user-menu__link" href="#">
+              <a class="user-menu__link" href="#" aria-label="Поиск по сайту">
                 <svg class="user-menu__icon" width="18" height="18" focusable="false" aria-hidden="true">
                   <rect width="18" height="18"/>
                   <use xlink:href="#search-icon"/>
@@ -42,11 +42,11 @@
                   <rect width="21" height="18"/>
                   <use xlink:href="#basket-icon"/>
                 </svg>
-                Корзина: пока пуста
+                <span class="user-menu__text">Корзина: пока пуста</span>
               </a>
             </li>
           </ul>
-          <ul class="main-nav__site-submenu site-submenu">
+          <ul class="main-nav__site-submenu main-nav__site-submenu--index  site-submenu">
             <li class="site-submenu__item">
               <a class="site-submenu__link" href="#">Новые поступления</a>
             </li>
@@ -54,7 +54,7 @@
               <a class="site-submenu__link" href="#">Распродажа</a>
             </li>
           </ul>
-          <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
+          <p class="main-nav__delivery-text main-nav__delivery-text--index">Бесплатная доставка по России</p>
         </nav>
       </div>
     </header>

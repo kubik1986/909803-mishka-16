@@ -30,13 +30,13 @@
 
 @media (min-width: $tablet-width) {
   .page-main__header {
-    padding-top: 100px;
-    min-height: 125px;
+    padding-top: 50px;
+    min-height: 75px;
 
     &--index {
-      padding-top: 160px;
+      padding-top: 110px;
       background-image: url("../img/hero-tablet@1x.jpg");
-      background-position: center top;
+      background-position: center -50px;
 
       .page-main__title {
         margin-bottom: 365px;
@@ -69,7 +69,7 @@
 
 @media (min-width: $desktop-width) {
   .page-main__header {
-    min-height: 155px;
+    min-height: 105px;
 
     &--index {
       .page-main__title {
