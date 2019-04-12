@@ -17,8 +17,11 @@
       height: 6px;
       content: "";
 
+      transform: rotate(180deg);
+
       background-image: url("../img/bg-zigzag-line.svg");
       background-repeat: repeat-x;
+      background-position: center center;
       background-size: contain;
     }
   }
@@ -63,6 +66,8 @@
       padding-bottom: 88px;
 
       &::after {
+        left: $padding-tablet;
+        width: $desktop-width - 2 * $padding-tablet;
         height: 23px;
       }
     }
