@@ -1,11 +1,17 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
-  @include list-reset;
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .social__item {
+  margin-top: 5px;
+
   &:not(:last-child) {
     margin-right: 40px;
   }

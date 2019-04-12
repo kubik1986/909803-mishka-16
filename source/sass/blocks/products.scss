@@ -1,9 +1,31 @@
 .products__list {
+  display: flex;
+  flex-direction: column;
+
   @include list-reset;
 }
 
 .products__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .products__item {
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-right: -51px;
+  }
+
+  .products__item {
+    margin-bottom: 50px;
+    margin-right: 51px;
+    width: 316px;
   }
 }

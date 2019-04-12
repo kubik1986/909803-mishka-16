@@ -4,17 +4,19 @@
 }
 
 .advantages__list {
+  display: flex;
+  flex-direction: column;
+
   @include list-reset;
 }
 
 .advantages__item {
   position: relative;
 
-  margin-bottom: 30px;
   padding-top: 50px;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -26,4 +28,76 @@
   padding-top: 50px;
 
   fill: $theme-color-main;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    padding-top: 60px;
+    width: 50%;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &--handmade {
+      order: 1;
+    }
+
+    &--price {
+      order: 2;
+    }
+
+    &--domestic {
+      order: 3;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--gift {
+      order: 5;
+    }
+
+    &:nth-child(-n+3) {
+      padding-right: 100px;
+    }
+
+    &:nth-child(n+4) {
+      padding-right: 40px;
+    }
+
+    &:first-child {
+      padding-right: 120px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    width: 350px;
+
+    &:nth-child(-n+3) {
+      padding-right: 110px;
+    }
+
+    &:nth-child(n+4) {
+      padding-right: 55px;
+    }
+
+    &:first-child {
+      padding-right: 120px;
+    }
+  }
 }
