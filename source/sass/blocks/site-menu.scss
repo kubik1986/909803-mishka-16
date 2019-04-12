@@ -45,6 +45,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .site-menu {
+    padding-right: 50px;
+  }
+
   .site-menu__item {
     position: relative;
 
