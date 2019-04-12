@@ -95,6 +95,10 @@
     width: 50%;
   }
 
+  .product__photo-img {
+    height: 100%;
+  }
+
   .product__description {
     width: 50%;
     box-sizing: border-box;
@@ -116,7 +120,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .product__photo {
+  .product__photo-img {
     width: 316px;
     height: 462px;
   }
