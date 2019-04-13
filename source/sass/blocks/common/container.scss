@@ -33,12 +33,3 @@
     }
   }
 }
-
-@media (min-width: 0) {
-  .container {
-    &--no-padding {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-}
