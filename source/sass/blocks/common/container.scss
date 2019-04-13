@@ -4,11 +4,14 @@
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
   box-sizing: border-box;
+}
 
-  &--no-padding,
-  &--mobile-no-padding {
-    padding-left: 0;
-    padding-right: 0;
+@media (max-width: $tablet-width - 1px) {
+  .container {
+    &--mobile-no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -16,25 +19,26 @@
   .container {
     padding-left: $padding-tablet;
     padding-right: $padding-tablet;
-
-    &--no-padding {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    &--mobile-no-padding {
-      padding-left: $padding-tablet;
-      padding-right: $padding-tablet;
-    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .container {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
     width: $desktop-width;
 
     &--narrow {
       padding-left: $padding-desktop-big;
+    }
+  }
+}
+
+@media (min-width: 0) {
+  .container {
+    &--no-padding {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

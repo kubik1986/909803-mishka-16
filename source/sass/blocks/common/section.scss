@@ -66,16 +66,14 @@
       padding-bottom: 88px;
 
       &::after {
-        left: $padding-tablet;
-        width: $desktop-width - 2 * $padding-tablet;
+        left: $padding-desktop;
+        width: $desktop-width - 2 * $padding-desktop;
         height: 23px;
       }
     }
   }
 
   .section__title {
-    margin-bottom: 62px;
-
     font-size: 53px;
     line-height: 57px;
   }
