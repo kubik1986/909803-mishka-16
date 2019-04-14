@@ -1,9 +1,28 @@
+$btn-width: 101px;
+$btn-height: 77px;
+
 .video {
   position: relative;
 
   padding-bottom: 56.25%; // стандартное соотношение сторон 16:9
   width: 100%;
   height: 0;
+
+  &:hover {
+    cursor: pointer;
+
+    & .video__btn {
+      transform: translate(-$btn-width / 2, -$btn-height / 2) scale(1.2);
+    }
+  }
+
+  &:active {
+    & .video__btn {
+      transform: translate(-$btn-width / 2, -$btn-height / 2) scale(0.8);
+      opacity: 0.3;
+      outline: none;
+    }
+  }
 }
 
 .video__media {
@@ -18,17 +37,14 @@
 }
 
 .video__btn {
-  $width: 101px;
-  $height: 77px;
-
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-$width / 2, -$height / 2);
+  transform: translate(-$btn-width / 2, -$btn-height / 2);
 
   padding: 0;
-  width: $width;
-  height: $height;
+  width: $btn-width;
+  height: $btn-height;
 
   border: none;
   background-color: transparent;
@@ -37,13 +53,7 @@
   background-position: center center;
   cursor: pointer;
 
-  &:hover,
   &:focus {
-    transform: translate(-$width / 2, -$height / 2) scale(1.2);
-  }
-
-  &:active {
-    transform: translate(-$width / 2, -$height / 2) scale(0.8);
-    opacity: 0.3;
+    transform: translate(-$btn-width / 2, -$btn-height / 2) scale(1.2);
   }
 }
