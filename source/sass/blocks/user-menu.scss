@@ -70,7 +70,7 @@
     box-shadow: -1px 0 0 0 $theme-color-complementary-light;
 
     &:last-child {
-      & .user-menu__link {
+      .user-menu__link {
         padding-right: 0;
       }
     }

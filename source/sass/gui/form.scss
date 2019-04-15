@@ -12,7 +12,7 @@
   flex-direction: column;
 
   &:not(:last-of-type) {
-    & .form__field {
+    .form__field {
       margin-bottom: 34px;
     }
   }
@@ -112,8 +112,8 @@
 
     &:hover,
     &:focus {
-      & + .form__icon {
-        & .form__icon-img {
+      + .form__icon {
+        .form__icon-img {
           fill: $theme-color-main-extra;
           opacity: 1;
         }
@@ -191,7 +191,7 @@
     flex-direction: row;
 
     &:not(:last-of-type) {
-      & .form__field {
+      .form__field {
         margin-bottom: 24px;
       }
     }

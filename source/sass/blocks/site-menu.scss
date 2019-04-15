@@ -67,7 +67,7 @@
     &:nth-child(odd) {
       box-shadow: inset -1px 0 0 0 $theme-color-complementary-light;
 
-      & .site-menu__link {
+      .site-menu__link {
         padding-left: 0;
         padding-right: 35px;
         width: 185px;
@@ -75,7 +75,7 @@
     }
 
     &:nth-child(even) {
-      & .site-menu__link {
+      .site-menu__link {
         padding-right: 0;
         padding-left: 35px;
         width: 195px;
@@ -83,7 +83,7 @@
     }
 
     &:nth-child(n+3) {
-      & .site-menu__link {
+      .site-menu__link {
         padding-top: 0;
         min-height: auto;
       }
