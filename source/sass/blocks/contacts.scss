@@ -69,8 +69,8 @@
 
 .contacts__feedback-btn {
   display: block;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 39px;
+  padding-right: 39px;
 }
 
 @media (max-width: $tablet-width - 1px) {
@@ -113,11 +113,17 @@
   }
 
   .contacts__feedback-btn {
-    width: 230px;
+    display: inline-block;
   }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .contacts__inner {
+    &:last-child {
+      text-align: center;
+    }
+  }
+
   .contacts__text {
     flex-direction: row;
     align-items: flex-start;
@@ -148,11 +154,6 @@
     margin-bottom: 55px;
 
     background-image: url("../img/map-tablet@1x.jpg");
-  }
-
-  .contacts__feedback-btn {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
