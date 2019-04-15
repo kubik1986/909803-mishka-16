@@ -8,13 +8,13 @@
 .site-menu__item {
   @include font(17px, 24px, 700);
 
-  box-shadow: inset 0 -1px 0 0 $theme-color-complementary-light;
+  border-bottom: 1px solid $theme-color-complementary-light;
 }
 
 .site-menu__link {
   display: block;
   padding: 27px 40px 25px 75px;
-  min-height: 80px;
+  min-height: 79px;
   box-sizing: border-box;
 
   @include link($font-color-dark);
@@ -36,17 +36,44 @@
   .site-menu__item {
     flex-shrink: 0;
 
-    font-size: 15px;
-
-    box-shadow: none;
+    border-bottom: none;
   }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
-  .site-menu__item {
-    padding: 16px 37px 0 0;
-    min-height: 50px;
+  .site-menu {
+    min-height: 52px;
     box-sizing: border-box;
+
+    border-top: 1px solid $theme-color-complementary-light;
+    background-color: $theme-bg-color-secondary;
+
+    &::after {
+      position: absolute;
+      top: -1px;
+      right: 100%;
+
+      display: block;
+      height: 100%;
+      content: "";
+
+      border-top: 1px solid $theme-color-complementary-light;
+      background-color: $theme-bg-color-secondary;
+    }
+
+    &--index {
+      background-color: $theme-bg-color-secondary-light;
+
+      &::after {
+        background-color: $theme-bg-color-secondary-light;
+      }
+    }
+  }
+
+  .site-menu__item {
+    padding: 17px 37px 0 0;
+
+    font-size: 15px;
   }
 
   .site-menu__link {
@@ -65,12 +92,12 @@
     font-size: 17px;
 
     &:nth-child(odd) {
-      box-shadow: inset -1px 0 0 0 $theme-color-complementary-light;
+      border-right: 1px solid $theme-color-complementary-light;
 
       .site-menu__link {
         padding-left: 0;
         padding-right: 35px;
-        width: 185px;
+        width: 184px;
       }
     }
 
@@ -93,6 +120,6 @@
   .site-menu__link {
     padding-top: 32px;
     padding-bottom: 32px;
-    min-height: 90px;
+    min-height: 88px;
   }
 }
