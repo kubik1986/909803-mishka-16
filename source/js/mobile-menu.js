@@ -11,5 +11,4 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
     navMain.classList.add('main-nav--closed');
   }
-  // navToggle.blur();
 });
