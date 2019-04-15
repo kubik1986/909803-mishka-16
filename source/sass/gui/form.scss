@@ -209,6 +209,21 @@
 
   .form__options-list {
     width: 100% - $title-width;
+
+    &--col {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+
+      .form__options-item {
+        width: 47.7%;
+
+        &:nth-last-child(-n+2) {
+          min-height: 54px;
+        }
+      }
+    }
   }
 
   .form__options-item {
@@ -298,7 +313,20 @@
   }
 
   .form__options-list {
+    justify-content: flex-start;
     width: 100% - $title-width;
+
+    &--col {
+      .form__options-item {
+        padding-right: 20px;
+        width: 30.1%;
+        box-sizing: border-box;
+
+        &:nth-last-child(-n+3) {
+          min-height: 54px;
+        }
+      }
+    }
   }
 
   .form__fields-list {
