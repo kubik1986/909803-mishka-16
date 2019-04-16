@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
 
-  padding: 25px 34px 23px;
+  padding: 26px 34px 23px;
 }
 
 .production__icon {
@@ -48,12 +48,12 @@
 }
 
 .production__bottom {
-  padding: 30px 34px 32px;
+  padding: 28px 34px 33px;
 }
 
 .production__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .production__order-btn {
@@ -94,7 +94,7 @@
   }
 
   .production__description {
-    margin-bottom: 37px;
+    margin-bottom: 36px;
   }
 }
 
@@ -137,11 +137,11 @@
     flex-direction: column;
     flex-grow: 1;
 
-    padding: 0 57px 58px 762px;
+    padding: 0 57px 60px 762px;
   }
 
   .production__description {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .production__order-btn {
