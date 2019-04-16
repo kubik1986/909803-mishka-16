@@ -1,8 +1,3 @@
-.promo {
-  padding-top: 27px;
-  padding-bottom: 42px;
-}
-
 .promo__product {
   &:not(:last-of-type) {
     margin-bottom: 30px;
@@ -12,7 +7,6 @@
 @media (min-width: $tablet-width) {
   .promo {
     padding-top: 44px;
-    padding-bottom: 68px;
   }
 
   .promo__product {
@@ -25,7 +19,6 @@
 @media (min-width: $desktop-width) {
   .promo {
     padding-top: 70px;
-    padding-bottom: 95px;
   }
 
   .promo__product {
