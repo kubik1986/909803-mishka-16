@@ -2,11 +2,10 @@
   position: relative;
 
   display: flex;
-  align-items: center;
 
-  padding: 21px 27px 21px 30px;
+  padding: 20px 27px 20px 30px;
   min-width: 300px;
-  min-height: 105px;
+  min-height: 103px;
   box-sizing: border-box;
 
   background-color: $theme-color-main;
@@ -43,6 +42,7 @@
 }
 
 .category__text {
+  margin-top: 5px;
   width: 160px;
 
   @include font(19px, 24px, 700);
@@ -99,17 +99,21 @@
   }
 
   .category__link {
-    padding: 30px 35px 28px;
+    padding: 28px 35px;
     min-height: 120px;
     box-sizing: border-box;
   }
 
   .category__text {
+    margin-top: 0;
+
     font-size: 20px;
     line-height: 30px;
   }
 
   .category__icon {
+    margin-top: 2px;
+
     &--narrow {
       margin-right: 0;
     }

@@ -5,6 +5,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .promo {
+    padding-top: 44px;
+  }
+
+  .promo__product {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    padding-top: 70px;
+  }
+
   .promo__product {
     &:not(:last-of-type) {
       margin-bottom: 50px;

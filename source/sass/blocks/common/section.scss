@@ -1,11 +1,11 @@
 .section {
   position: relative;
 
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 30px;
 
   &--separator {
-    padding-bottom: 36px;
+    padding-bottom: 42px;
 
     &::after {
       position: absolute;
@@ -30,6 +30,7 @@
 .section__title {
   margin: 0;
   margin-bottom: 30px;
+  margin-left: -2px;
 
   @include font(25px, 30px, 700);
   color: $font-color-dark;
@@ -37,11 +38,11 @@
 
 @media (min-width: $tablet-width) {
   .section {
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 55px;
 
     &--separator {
-      padding-bottom: 70px;
+      padding-bottom: 68px;
 
       &::after {
         height: 15px;
@@ -51,6 +52,7 @@
 
   .section__title {
     margin-bottom: 50px;
+    margin-left: -4px;
 
     font-size: 43px;
     line-height: 50px;
@@ -59,11 +61,11 @@
 
 @media (min-width: $desktop-width) {
   .section {
-    padding-top: 65px;
+    padding-top: 60px;
     padding-bottom: 65px;
 
     &--separator {
-      padding-bottom: 88px;
+      padding-bottom: 95px;
 
       &::after {
         left: $padding-desktop;
@@ -76,5 +78,6 @@
   .section__title {
     font-size: 53px;
     line-height: 57px;
+    letter-spacing: -0.005em;
   }
 }

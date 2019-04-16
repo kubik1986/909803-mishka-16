@@ -132,10 +132,15 @@
   .product__description {
     flex-grow: 1;
 
+    padding-top: 25px;
     padding-right: 31px;
   }
 
   .product__parameters {
     margin-bottom: 13px;
+  }
+
+  .product__buy {
+    padding-top: 22px;
   }
 }

@@ -5,9 +5,14 @@
   color: $font-color;
 }
 
+.product-full__header {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-full__title {
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 
   @include font(25px, 30px, 700);
   color: $font-color-dark;
@@ -15,7 +20,7 @@
 
 .product-full__pin {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @include font(17px, 20px, 700);
   text-transform: uppercase;
@@ -24,11 +29,12 @@
 
 .product-full__features {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .product-full__parameters {
   margin-bottom: 28px;
+  width: 100%;
 
   line-height: 20px;
 
@@ -37,6 +43,19 @@
 
 .product-full__parameter {
   border-bottom: 1px solid $theme-color-complementary-light;
+}
+
+.product-full__field,
+.product-full__value {
+  padding: 9px 0 10px;
+  box-sizing: border-box;
+
+  vertical-align: middle;
+}
+
+.product-full__field {
+  padding-right: 10px;
+  width: 98px;
 }
 
 .product-full__photo {
@@ -63,35 +82,38 @@
 }
 
 @media (min-width: $tablet-width) {
+  .product-full__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .product-full__inner {
     display: flex;
     flex-direction: column;
 
     width: calc(100% - (333px + 43px));
-    min-height: 410px;
+    min-height: 413px;
   }
 
   .product-full__title {
     font-size: 43px;
     line-height: 50px;
 
-    margin-bottom: 45px;
-    width: 75%;
+    margin-bottom: 48px;
+    margin-left: -3px;
+    width: 79%;
   }
 
   .product-full__pin {
-    position: absolute;
-    top: 10px;
-    right: 0;
-
-    width: 120px;
+    margin-top: 10px;
+    width: 125px;
 
     line-height: 17px;
     text-align: center;
   }
 
   .product-full__features {
-    margin-bottom: 34px;
+    margin-bottom: 37px;
 
     font-size: 17px;
     line-height: 30px;
@@ -113,7 +135,7 @@
 
   .product-full__price {
     margin-top: auto;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
 
     font-size: 20px;
   }
@@ -121,7 +143,7 @@
 
 @media (min-width: $desktop-width) {
   .product-full__inner {
-    width: 292px;
+    width: 33.37%;
     min-height: 480px;
   }
 
@@ -129,23 +151,33 @@
     position: relative;
     z-index: 10;
 
-    padding-top: 60px;
+    padding-top: 52px;
+    width: 65%;
 
     font-size: 53px;
     line-height: 57px;
+    letter-spacing: -0.005em;
   }
 
   .product-full__pin {
-    top: 70px;
-    left: -150px;
+    position: absolute;
+    top: 68px;
+    left: -155px;
+
+    margin-top: 0;
   }
 
   .product-full__features {
-    margin-bottom: 46px;
+    margin-bottom: 51px;
   }
 
   .product-full__parameters {
     margin-bottom: 60px;
+  }
+
+  .product-full__field,
+  .product-full__value {
+    padding: 7px 0 12px;
   }
 
   .product-full__photo {
