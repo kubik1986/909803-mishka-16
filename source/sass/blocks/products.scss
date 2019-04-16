@@ -1,3 +1,7 @@
+.products {
+  padding-top: 30px;
+}
+
 .products__list {
   display: flex;
   flex-direction: column;
@@ -7,15 +11,29 @@
 
 .products__item {
   margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .products {
+    padding-top: 77px;
+    padding-bottom: 53px;
+  }
+
   .products__item {
     margin-bottom: 54px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .products {
+    padding-top: 127px;
+    padding-bottom: 6px;
+  }
+
   .products__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,5 +45,9 @@
     margin-bottom: 50px;
     margin-right: 51px;
     width: 316px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
 }
