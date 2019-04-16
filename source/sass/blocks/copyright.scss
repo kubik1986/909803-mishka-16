@@ -1,17 +1,19 @@
 .copyright {
   display: flex;
-  align-items: center;
+  justify-content: center;
 
   @include font(19px, 19px, 700);
   color: $font-color-dark;
 }
 
 .copyright__text {
+  margin-top: 7px;
   margin-right: 30px;
 }
 
 .copyright__logo {
   display: block;
+  margin-top: 2px;
   width: 27px;
   height: 34px;
 
