@@ -143,7 +143,7 @@
 
 @media (min-width: $desktop-width) {
   .product-full__inner {
-    width: 292px;
+    width: 33.37%;
     min-height: 480px;
   }
 
@@ -156,6 +156,7 @@
 
     font-size: 53px;
     line-height: 57px;
+    letter-spacing: -0.005em;
   }
 
   .product-full__pin {
@@ -180,8 +181,6 @@
   }
 
   .product-full__photo {
-    top: 0;
-
     width: 525px;
     height: 636px;
   }
