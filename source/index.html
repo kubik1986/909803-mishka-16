@@ -18,7 +18,7 @@
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
-          <ul class="main-nav__site-menu  main-nav__site-menu--index site-menu">
+          <ul class="main-nav__site-menu site-menu site-menu--index">
             <li class="site-menu__item">
               <a class="site-menu__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -46,7 +46,7 @@
               </a>
             </li>
           </ul>
-          <ul class="main-nav__site-submenu main-nav__site-submenu--index  site-submenu">
+          <ul class="main-nav__site-submenu site-submenu site-submenu--index">
             <li class="site-submenu__item">
               <a class="site-submenu__link" href="#">Новые поступления</a>
             </li>
@@ -87,134 +87,126 @@
         </div>
       </div>
 
-      <section class="promo section section--separator">
-        <div class="container container--narrow">
-          <h2 class="visually-hidden">Лучшие предложения</h2>
-          <div class="promo__product product-full">
-            <h3 class="product-full__title">Вязаные корзинки</h3>
-            <span class="product-full__pin">Товар недели</span>
-            <div class="product-full__inner">
-              <p class="product-full__features">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-              <table class="product-full__parameters">
-                <tr class="product-full__parameter">
-                  <td class="product-full__field">Цвет:</td>
-                  <td class="product-full__value">«Тиффани»/серый</td>
-                </tr>
-                <tr class="product-full__parameter">
-                  <td class="product-full__field">Диаметр:</td>
-                  <td class="product-full__value">25 см</td>
-                </tr>
-                <tr class="product-full__parameter">
-                  <td class="product-full__field">Высота:</td>
-                  <td class="product-full__value">15 см</td>
-                </tr>
-              </table>
-              <img class="product-full__photo" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
-              <span class="product-full__price">Цена: 990 руб.</span>
-              <a class="product-full__buy-btn btn" href="#">Заказать</a>
-            </div>
+      <section class="promo section section--separator container container--narrow">
+        <h2 class="visually-hidden">Лучшие предложения</h2>
+        <div class="promo__product product-full">
+          <h3 class="product-full__title">Вязаные корзинки</h3>
+          <span class="product-full__pin">Товар недели</span>
+          <div class="product-full__inner">
+            <p class="product-full__features">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="product-full__parameters">
+              <tr class="product-full__parameter">
+                <td class="product-full__field">Цвет:</td>
+                <td class="product-full__value">«Тиффани»/серый</td>
+              </tr>
+              <tr class="product-full__parameter">
+                <td class="product-full__field">Диаметр:</td>
+                <td class="product-full__value">25 см</td>
+              </tr>
+              <tr class="product-full__parameter">
+                <td class="product-full__field">Высота:</td>
+                <td class="product-full__value">15 см</td>
+              </tr>
+            </table>
+            <img class="product-full__photo" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+            <span class="product-full__price">Цена: 990 руб.</span>
+            <a class="product-full__buy-btn btn" href="#">Заказать</a>
           </div>
         </div>
       </section>
 
-      <section class="advantages section">
-        <div class="container container--narrow">
-          <h2 class="advantages__title section__title">Коротко о нас:</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item--eco">
-              <svg class="advantages__icon" width="32" height="37" focusable="false" aria-hidden="true">
-                <rect width="32" height="37"/>
-                <use xlink:href="#flower-icon"/>
-              </svg>
-              Экологически чистые материалы</li>
-            <li class="advantages__item advantages__item--price">
-              <svg class="advantages__icon" width="47" height="27" focusable="false" aria-hidden="true">
-                <rect width="47" height="27"/>
-                <use xlink:href="#money-icon"/>
-              </svg>
-              Скандинавский стиль по российской цене</li>
-            <li class="advantages__item advantages__item--likes">
-              <svg class="advantages__icon" width="34" height="27" focusable="false" aria-hidden="true">
-                <rect width="34" height="27"/>
-                <use xlink:href="#heart-icon"/>
-              </svg>
-              Увеличивает лайки на фотографиях</li>
-            <li class="advantages__item advantages__item--handmade">
-              <svg class="advantages__icon" width="35" height="34" focusable="false" aria-hidden="true">
-                <rect width="35" height="34"/>
-                <use xlink:href="#ball-icon"/>
-              </svg>
-              Связано вручную с любовью и умилением</li>
-            <li class="advantages__item advantages__item--domestic">
-              <svg class="advantages__icon" width="55" height="23" focusable="false" aria-hidden="true">
-                <rect width="55" height="23"/>
-                <use xlink:href="#rocket-icon"/>
-              </svg>
-              Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--gift">
-              <svg class="advantages__icon" width="33" height="32" focusable="false" aria-hidden="true">
-                <rect width="33" height="32"/>
-                <use xlink:href="#gift-icon"/>
-              </svg>
-              Поставляется в подарочной упаковке</li>
-          </ul>
-        </div>
+      <section class="advantages section container container--narrow">
+        <h2 class="advantages__title section__title">Коротко о нас:</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">
+            <svg class="advantages__icon" width="32" height="37" focusable="false" aria-hidden="true">
+              <rect width="32" height="37"/>
+              <use xlink:href="#flower-icon"/>
+            </svg>
+            Экологически чистые&nbsp;материалы</li>
+          <li class="advantages__item advantages__item--price">
+            <svg class="advantages__icon" width="47" height="27" focusable="false" aria-hidden="true">
+              <rect width="47" height="27"/>
+              <use xlink:href="#money-icon"/>
+            </svg>
+            Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="advantages__item advantages__item--likes">
+            <svg class="advantages__icon" width="34" height="27" focusable="false" aria-hidden="true">
+              <rect width="34" height="27"/>
+              <use xlink:href="#heart-icon"/>
+            </svg>
+            Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="advantages__item advantages__item--handmade">
+            <svg class="advantages__icon" width="35" height="34" focusable="false" aria-hidden="true">
+              <rect width="35" height="34"/>
+              <use xlink:href="#ball-icon"/>
+            </svg>
+            Связано вручную с любовью&nbsp;и умилением</li>
+          <li class="advantages__item advantages__item--domestic">
+            <svg class="advantages__icon" width="55" height="23" focusable="false" aria-hidden="true">
+              <rect width="55" height="23"/>
+              <use xlink:href="#rocket-icon"/>
+            </svg>
+            Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift">
+            <svg class="advantages__icon" width="33" height="32" focusable="false" aria-hidden="true">
+              <rect width="33" height="32"/>
+              <use xlink:href="#gift-icon"/>
+            </svg>
+            Поставляется в подарочной&nbsp;упаковке</li>
+        </ul>
       </section>
 
-      <section class="reviews section section--separator">
-        <div class="container container--narrow">
-          <h2 class="reviews__title section__title">Отзывы</h2>
-          <div class="reviews__list">
-            <blockquote class="reviews__item reviews__item--current">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author-name">Анастасия Красильникова
-                <a class="reviews__author-link" href="#">@misssssiskras</a>
-              </cite>
-            </blockquote>
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Заказала вязаного дракона, в масштабе 1:20. Полученный товар превзошел все мои ожидания: он такой милый и почти как настоящий, жалко только огонь не пускает. Теперь я снова счастливая обладательница трех драконов!</p>
-              <cite class="reviews__author-name">Дейнерис Таргариен
-                <a class="reviews__author-link" href="#">@ironthroneismine</a>
-              </cite>
-            </blockquote>
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Заказал большую корзину в цветах дома Ланнистеров для хранения своей железной руки. Заказ выполнен в очень короткие сроки, до прихода зимы. Качеством доволен. Закажу еще корзину побольше для своей сестры для хранения остатков жидкого огня.</p>
-              <cite class="reviews__author-name">Джейме Ланнистер
-                <a class="reviews__author-link" href="#">@alionstillhasclaws</a>
-              </cite>
-            </blockquote>
-          </div>
-          <div class="reviews__controls">
-            <button class="reviews__btn reviews__btn--prev" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__btn reviews__btn--next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
-          </div>
-          <a class="reviews__write-btn btn" href="#">Написать</a>
+      <section class="reviews section section--separator container container--narrow">
+        <h2 class="reviews__title section__title">Отзывы</h2>
+        <div class="reviews__list">
+          <blockquote class="reviews__item reviews__item--current">
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <cite class="reviews__author-name">Анастасия Красильникова
+              <a class="reviews__author-link" href="#">@misssssiskras</a>
+            </cite>
+          </blockquote>
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Заказала вязаного дракона, в масштабе 1:20. Полученный товар превзошел все мои ожидания: он такой милый и почти как настоящий, жалко только огонь не пускает. Теперь я снова счастливая обладательница трех драконов!</p>
+            <cite class="reviews__author-name">Дейнерис Таргариен
+              <a class="reviews__author-link" href="#">@ironthroneismine</a>
+            </cite>
+          </blockquote>
+          <blockquote class="reviews__item">
+            <p class="reviews__text">Заказал большую корзину в цветах дома Ланнистеров для хранения своей железной руки. Заказ выполнен в очень короткие сроки, до прихода зимы. Качеством доволен. Закажу еще корзину побольше для своей сестры для хранения остатков жидкого огня.</p>
+            <cite class="reviews__author-name">Джейме Ланнистер
+              <a class="reviews__author-link" href="#">@alionstillhasclaws</a>
+            </cite>
+          </blockquote>
         </div>
+        <div class="reviews__controls">
+          <button class="reviews__btn reviews__btn--prev" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="reviews__btn reviews__btn--next" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
+        </div>
+        <a class="reviews__write-btn btn" href="#">Написать</a>
       </section>
 
       <section class="contacts section">
-        <div class="container container--no-padding">
-          <div class="contacts__inner">
-            <h2 class="contacts__title section__title">Контакты</h2>
-            <div class="contacts__text">
-              <p class="contacts__section">
-                <span class="contacts__field">e-mail:</span>
-                <a class="contacts__value contacts__value--link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-              </p>
-              <p class="contacts__section">
-                <span class="contacts__field">Адрес:</span>
-                <span class="contacts__value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
-              </p>
-            </div>
+        <div class="contacts__inner container container--narrow">
+          <h2 class="contacts__title section__title">Контакты</h2>
+          <div class="contacts__text">
+            <p class="contacts__section">
+              <span class="contacts__field">e-mail:</span>
+              <a class="contacts__value contacts__value--link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </p>
+            <p class="contacts__section">
+              <span class="contacts__field">адрес:</span>
+              <span class="contacts__value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
+            </p>
           </div>
-          <div class="contacts__map" id="map"></div>
-          <div class="contacts__inner">
-            <a class="contacts__feedback-btn btn" href="#">Напишите нам</a>
-          </div>
+        </div>
+        <div class="contacts__map" id="map"></div>
+        <div class="contacts__inner container container--narrow">
+          <a class="contacts__feedback-btn btn" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -294,5 +286,6 @@
       </section>
     </div>
 
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

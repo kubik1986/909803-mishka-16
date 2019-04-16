@@ -61,17 +61,13 @@
 
     <main class="page-main">
       <div class="page-main__header">
-        <div class="container">
-          <h1 class="page-main__title">Вязание на заказ</h1>
-        </div>
+        <h1 class="page-main__title container">Вязание на заказ</h1>
       </div>
 
       <section class="order section">
-        <div class="container">
-          <h2 class="visually-hidden">Форма заказа</h2>
-          <p class="order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        </div>
-        <form class="order-form form" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="visually-hidden">Форма заказа</h2>
+        <p class="order__intro container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="form" method="post" action="https://echo.htmlacademy.ru">
           <div class="form__wrapper">
             <div class="form__group container" role="group" aria-labelledby="type-group-title">
               <span class="form__title" id="type-group-title">Тип</span>
@@ -121,16 +117,16 @@
           <div class="form__wrapper">
             <div class="form__group container" role="group" aria-labelledby="name-group-title">
               <span class="form__title" id="name-group-title">ФИО</span>
-              <div class="form__options-list">
-                <label class="form__options-item">
+              <div class="form__fields-list">
+                <label class="form__labeled-field">
                   <span class="form__subtitle">Имя:</span>
                   <input class="form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
                 </label>
-                <label class="form__options-item">
+                <label class="form__labeled-field">
                   <span class="form__subtitle">Фамилия:</span>
                   <input class="form__input" type="text" name="surname" placeholder="Укажите фамилию*" required>
                 </label>
-                <label class="form__options-item">
+                <label class="form__labeled-field">
                   <span class="form__subtitle">Отчество:</span>
                   <input class="form__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
                 </label>
@@ -166,11 +162,13 @@
           <div class="form__wrapper">
             <div class="form__group container">
               <label class="form__title" for="message-field" aria-label="Дополнительная информация">Доп</label>
-              <textarea class="form__input form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
+              <div class="form__field">
+                <textarea class="form__input form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
+              </div>
             </div>
-            <div class="order-form__submit container">
-              <span class="order-form__remark">*Поля обязательны для заполнения</span>
-              <button class="order-form__submit-btn btn" type="submit">Отправить заказ</button>
+            <div class="form__submit container">
+              <span class="form__remark">*Поля обязательны для заполнения</span>
+              <button class="form__submit-btn btn" type="submit">Отправить заказ</button>
             </div>
           </div>
         </form>
@@ -226,5 +224,6 @@
       </div>
     </footer>
 
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
