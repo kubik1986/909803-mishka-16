@@ -17,6 +17,8 @@
   margin-bottom: 15px;
   padding: 18px;
   width: 46px;
+
+  cursor: pointer;
 }
 
 .basket-add-form__option {
@@ -27,14 +29,50 @@
     top: 0;
     left: 0;
 
-    display: block;
     width: 100%;
     height: 100%;
     content: "";
-    box-shadow: inset 0 0 0 2px rgba($theme-color-complementary-dark, 0.1);
+    box-sizing: border-box;
+
+    border: 2px solid rgba($theme-color-complementary-dark, 0.1);
+  }
+
+  &:hover {
+    &::before {
+      border-color: rgba($theme-color-complementary-dark, 0.3);
+    }
+  }
+}
+
+.basket-add-form__control {
+  &:checked {
+    + .basket-add-form__option {
+      &::before {
+        border-color: $theme-color-main-extra;
+      }
+    }
+  }
+
+  &:focus {
+    + .basket-add-form__option {
+      &::before {
+        box-shadow: 4px 4px 5px 0 rgba($theme-color-complementary-dark, 0.1);
+      }
+    }
   }
 }
 
 .basket-add-form__submit-btn {
   width: 100%;
+
+  &:focus {
+    outline: none;
+    box-shadow: 4px 4px 5px 0 rgba($theme-color-complementary-dark, 0.15);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .basket-add-form__options-item {
+    width: 76px;
+  }
 }

@@ -25,6 +25,11 @@
     background-image: url("../img/icon-menu-close.svg");
     background-repeat: no-repeat;
     background-position: center center;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px 4px rgba($theme-color-complementary-dark, 0.1);
+    }
   }
 }
 
@@ -42,6 +47,26 @@
   margin: 0;
   margin-bottom: 20px;
 
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .basket-add {
+    padding: 34px 108px 46px;
+    width: 566px;
+  }
+
+  .basket-add__title {
+    margin-bottom: 15px;
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 57px;
+    letter-spacing: -0.01em;
+  }
+
+  .basket-add__description {
+    font-size: 17px;
+  }
 }
