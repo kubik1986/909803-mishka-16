@@ -70,14 +70,14 @@
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
           <div class="form__wrapper">
             <div class="form__group container" role="group" aria-labelledby="type-group-title">
-              <span class="form__title" id="type-group-title">Тип</span>
+              <span class="form__title form__title--radio" id="type-group-title">Тип</span>
               <div class="form__options-list">
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="radio" name="category" value="interior" checked>
+                  <input class="visually-hidden form__control" type="radio" name="category" value="interior" checked>
                   <span class="form__option form__option--radio">Аксессуар для интерьера</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="radio" name="category" value="toy">
+                  <input class="visually-hidden form__control" type="radio" name="category" value="toy">
                   <span class="form__option form__option--radio">Детская игрушка</span>
                 </label>
               </div>
@@ -85,30 +85,30 @@
           </div>
           <div class="form__wrapper">
             <div class="form__group container" role="group" aria-labelledby="color-group-title">
-              <span class="form__title" id="color-group-title">Цвет</span>
+              <span class="form__title form__title--checkbox" id="color-group-title">Цвет</span>
               <div class="form__options-list form__options-list--col">
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="white" checked>
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="white" checked>
                   <span class="form__option form__option--checkbox">Белый</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="gray" checked>
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="gray" checked>
                   <span class="form__option form__option--checkbox">Серый</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="tiffany">
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="tiffany">
                   <span class="form__option form__option--checkbox">«Тиффани»</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="black">
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="black">
                   <span class="form__option form__option--checkbox">Черный</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="pink">
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="pink">
                   <span class="form__option form__option--checkbox">Розовый</span>
                 </label>
                 <label class="form__options-item">
-                  <input class="visually-hidden" type="checkbox" name="color" value="orange">
+                  <input class="visually-hidden form__control" type="checkbox" name="color" value="orange">
                   <span class="form__option form__option--checkbox">Оранжевый</span>
                 </label>
               </div>
@@ -116,7 +116,7 @@
           </div>
           <div class="form__wrapper">
             <div class="form__group container" role="group" aria-labelledby="name-group-title">
-              <span class="form__title" id="name-group-title">ФИО</span>
+              <span class="form__title form__title--labeled-field" id="name-group-title">ФИО</span>
               <div class="form__fields-list">
                 <label class="form__labeled-field">
                   <span class="form__subtitle">Имя:</span>
@@ -135,7 +135,7 @@
           </div>
           <div class="form__wrapper">
             <div class="form__group container">
-              <label class="form__title" for="tel-field" aria-label="Телефон">Тел</label>
+              <label class="form__title form__title--field" for="tel-field" aria-label="Телефон">Тел</label>
               <div class="form__field">
                 <input class="form__input form__input--icon" type="tel" name="phone" id="tel-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <div class="form__icon">
@@ -147,7 +147,7 @@
               </div>
             </div>
             <div class="form__group container">
-              <label class="form__title" for="email-field">E-mail</label>
+              <label class="form__title form__title--field" for="email-field">E-mail</label>
               <div class="form__field">
                 <input class="form__input form__input--icon" type="email" name="email" id="email-field" placeholder="Ваш Email*" required>
                 <div class="form__icon">
@@ -161,15 +161,15 @@
           </div>
           <div class="form__wrapper">
             <div class="form__group container">
-              <label class="form__title" for="message-field" aria-label="Дополнительная информация">Доп</label>
+              <label class="form__title form__title--textarea" for="message-field" aria-label="Дополнительная информация">Доп</label>
               <div class="form__field">
                 <textarea class="form__input form__input--textarea" name="message" id="message-field" placeholder="Опишите все ваши пожелания к заказу" rows="7"></textarea>
               </div>
             </div>
-            <div class="form__submit container">
+            <p class="form__submit container">
               <span class="form__remark">*Поля обязательны для заполнения</span>
               <button class="form__submit-btn btn" type="submit">Отправить заказ</button>
-            </div>
+            </p>
           </div>
         </form>
       </section>
