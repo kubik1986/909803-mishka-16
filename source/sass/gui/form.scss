@@ -162,6 +162,7 @@
     + .form__option {
       &::before {
         border-color: $theme-color-main-extra;
+        opacity: 1;
       }
     }
   }
