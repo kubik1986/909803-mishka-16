@@ -114,8 +114,7 @@
 
   &:active {
     &::before {
-      border-color: $theme-color-complementary-dark;
-      opacity: 0.3;
+      border-color: rgba($theme-color-complementary-dark, 0.3);
     }
   }
 }
@@ -158,11 +157,20 @@
     }
   }
 
+  &:disabled {
+    + .form__option {
+      color: rgba($theme-color-complementary-dark, 0.3);
+
+      &::before {
+        border-color: rgba($theme-color-complementary-dark, 0.3);
+      }
+    }
+  }
+
   &:focus {
     + .form__option {
       &::before {
         border-color: $theme-color-main-extra;
-        opacity: 1;
       }
     }
   }
