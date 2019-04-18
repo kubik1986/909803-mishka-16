@@ -87,6 +87,11 @@
     font-size: 17px;
   }
 
+  .contacts__title {
+    margin-bottom: 50px;
+    padding-right: 100px;
+  }
+
   .contacts__inner {
     position: relative;
 
@@ -105,11 +110,6 @@
         background-position: center center;
       }
     }
-  }
-
-  .contacts__title {
-    margin-bottom: 50px;
-    padding-right: 100px;
   }
 
   .contacts__feedback-btn {
@@ -166,10 +166,10 @@
 
     margin-left: auto;
     margin-right: auto;
-    padding-top: 141px;
+    padding-top: 71px;
     padding-bottom: 105px;
     width: $desktop-width;
-    min-height: 387px;
+    min-height: 457px;
 
     font-size: 17px;
   }
@@ -178,17 +178,21 @@
     padding-right: $padding-desktop + 525px + 50px;
 
     &:first-child {
-      margin-bottom: auto;
+      padding-top: 70px;
 
       &::after {
-        top: -8px;
+        top: 62px;
         left: 113px;
       }
+    }
+
+    &:last-child {
+      margin-top: auto;
     }
   }
 
   .contacts__title {
-    padding-right: 570px;
+    padding-right: 0;
   }
 
   .contacts__field {
@@ -205,10 +209,12 @@
 
   .contacts__map {
     position: absolute;
-    top: 70px;
+    top: 71px;
     right: $padding-desktop;
 
+    margin: 0;
     width: 525px;
+    height: calc(100% - 71px - 105px);
 
     background-image: url("../img/map-desktop@1x.jpg");
   }
