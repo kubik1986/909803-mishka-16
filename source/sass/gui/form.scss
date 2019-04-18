@@ -13,14 +13,50 @@
 
   &:not(:last-of-type) {
     .form__field {
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
   }
 }
 
 .form__title {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
   text-transform: uppercase;
   color: $theme-color-main;
+
+  &--radio {
+    margin-bottom: 23px;
+  }
+
+  &--checkbox {
+    margin-bottom: 25px;
+  }
+
+  &--labeled-field {
+    margin-bottom: 26px;
+  }
+
+  &--field {
+    margin-bottom: 6px;
+  }
+
+  &--textarea {
+    margin-bottom: 24px;
+  }
+
+  &::after {
+    flex-grow: 1;
+
+    display: block;
+    margin-left: 20px;
+    height: 1px;
+    content: "";
+
+    background-color: $theme-color-main;
+  }
 }
 
 .form__subtitle {
@@ -50,19 +86,92 @@
   padding-left: 62px;
   box-sizing: border-box;
 
+  user-select: none;
+
   &::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 40px;
     height: 40px;
+    box-sizing: border-box;
     content: "";
-    background-color: gray;
+
+    border: 2px solid $theme-color-complementary-dark;
+  }
+
+  &--radio {
+    &::before {
+      border-radius: 50%;
+    }
   }
 
   &:hover {
     &::before {
-      background-color: aquamarine;
+      border-color: $theme-color-main-extra;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: rgba($theme-color-complementary-dark, 0.3);
+    }
+  }
+}
+
+.form__control {
+  &:checked {
+    + .form__option {
+      &::after {
+        position: absolute;
+        content: "";
+      }
+
+      &--radio {
+        &::after {
+          top: 12px;
+          left: 12px;
+
+          width: 16px;
+          height: 16px;
+
+          border-radius: 50%;
+          background-color: $theme-color-main-extra;
+        }
+      }
+
+      &--checkbox {
+        &::after {
+          top: 10px;
+          left: 10px;
+
+          width: 20px;
+          height: 9px;
+
+          border-left: 2px solid $theme-color-complementary-dark;
+          border-bottom: 2px solid $theme-color-complementary-dark;
+
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    + .form__option {
+      color: rgba($theme-color-complementary-dark, 0.3);
+
+      &::before {
+        border-color: rgba($theme-color-complementary-dark, 0.3);
+      }
+    }
+  }
+
+  &:focus {
+    + .form__option {
+      &::before {
+        border-color: $theme-color-main-extra;
+      }
     }
   }
 }
@@ -157,7 +266,8 @@
   display: flex;
   flex-direction: column;
 
-  margin-top: 17px;
+  margin-top: 14px;
+  margin-bottom: 0;
 }
 
 .form__remark {
@@ -189,6 +299,7 @@
 
   .form__group {
     flex-direction: row;
+    align-items: flex-start;
 
     &:not(:last-of-type) {
       .form__field {
@@ -198,13 +309,19 @@
   }
 
   .form__title {
+    display: block;
     margin-top: 17px;
+    margin-bottom: 0;
     padding-right: 30px;
     width: $title-width;
     box-sizing: border-box;
 
     font-size: 17px;
     line-height: 18px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .form__options-list {
@@ -220,7 +337,7 @@
         width: 47.7%;
 
         &:nth-last-child(-n+2) {
-          min-height: 54px;
+          min-height: 52px;
         }
       }
     }
@@ -230,7 +347,7 @@
     min-height: 76px;
 
     &:last-child {
-      min-height: 54px;
+      min-height: 52px;
     }
   }
 
@@ -239,9 +356,44 @@
     padding-bottom: 15px;
     padding-left: 80px;
 
-    &::before {
-      width: 54px;
-      height: 54px;
+    &--radio {
+      &::before {
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    &--checkbox {
+      &::before {
+        width: 54px;
+        height: 52px;
+      }
+    }
+  }
+
+  .form__control {
+    &:checked {
+      + .form__option {
+        &--radio {
+          &::after {
+            top: 15px;
+            left: 15px;
+
+            width: 22px;
+            height: 22px;
+          }
+        }
+
+        &--checkbox {
+          &::after {
+            top: 13px;
+            left: 12px;
+
+            width: 28px;
+            height: 15px;
+          }
+        }
+      }
     }
   }
 
@@ -299,8 +451,8 @@
 
   .form__submit-btn {
     margin-right: 30px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -323,7 +475,7 @@
         box-sizing: border-box;
 
         &:nth-last-child(-n+3) {
-          min-height: 54px;
+          min-height: 52px;
         }
       }
     }
@@ -350,6 +502,10 @@
 
   .form__icon {
     right: 0;
+  }
+
+  .form__submit {
+    margin-top: 46px;
   }
 
   .form__submit-btn {

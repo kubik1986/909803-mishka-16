@@ -1,4 +1,7 @@
 .order {
+  padding-top: 21px;
+  padding-bottom: 40px;
+
   @include font(13px, 24px, 400);
   color: $font-color;
 }
@@ -10,6 +13,9 @@
 
 @media (min-width: $tablet-width) {
   .order {
+    padding-top: 70px;
+    padding-bottom: 0;
+
     font-size: 17px;
     line-height: 30px;
   }
@@ -21,6 +27,8 @@
 
 @media (min-width: $desktop-width) {
   .order {
+    padding-top: 118px;
+
     font-size: 17px;
     line-height: 30px;
   }

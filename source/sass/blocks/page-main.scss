@@ -37,19 +37,6 @@
   .page-main__header {
     padding-top: 44px;
 
-    &--index {
-      padding-top: 102px;
-      padding-bottom: 0;
-      background-image: url("../img/hero-tablet@1x.jpg");
-      background-position: center -52px;
-
-      .page-main__title {
-        margin-bottom: 80px;
-        padding: 0;
-        min-height: 393px;
-      }
-    }
-
     &::after {
       position: absolute;
       left: 0;
@@ -65,6 +52,19 @@
       background-position: center center;
       background-size: contain;
     }
+
+    &--index {
+      padding-top: 102px;
+      padding-bottom: 0;
+      background-image: url("../img/hero-tablet@1x.jpg");
+      background-position: center -52px;
+
+      .page-main__title {
+        margin-bottom: 80px;
+        padding: 0;
+        min-height: 393px;
+      }
+    }
   }
 
   .page-main__title {
@@ -78,18 +78,25 @@
     padding-top: 42px;
     min-height: 205px;
 
+    &::after {
+      bottom: -15px;
+      height: 34px;
+    }
+
     &--index {
       padding-top: 101px;
+
+      &::after {
+        bottom: -18px;
+        height: 37px;
+
+        background-size: 1250px 37px;
+      }
 
       .page-main__title {
         margin-bottom: 100px;
         min-height: 374px;
       }
-    }
-
-    &::after {
-      bottom: -15px;
-      height: 34px;
     }
   }
 
