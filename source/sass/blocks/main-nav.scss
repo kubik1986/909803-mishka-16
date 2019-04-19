@@ -44,6 +44,11 @@
   }
 }
 
+.main-nav__logo-img {
+  width: 100%;
+  height: auto;
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 14px;
@@ -182,7 +187,7 @@
 
   .main-nav__logo {
     width: 149px;
-    height: 72px;
+    height: 73px;
   }
 
   .main-nav__site-menu {
