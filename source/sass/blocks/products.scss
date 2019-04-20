@@ -5,6 +5,7 @@
 .products__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @include list-reset;
 }
@@ -37,6 +38,7 @@
   .products__list {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
 
     margin-right: -51px;
   }
@@ -44,7 +46,6 @@
   .products__item {
     margin-bottom: 50px;
     margin-right: 51px;
-    width: 316px;
 
     &:last-child {
       margin-bottom: 50px;
