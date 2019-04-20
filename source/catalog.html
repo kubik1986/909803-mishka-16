@@ -121,7 +121,23 @@
         <ul class="products__list">
           <li class="products__item product">
             <a class="product__photo" href="#">
-              <img class="product__photo-img" src="img/photo-hare-mobile@1x.jpg" alt="Вязаный зайчик антропоморфного типа">
+              <picture>
+                <source media="(min-width: 1150px)"
+                        srcset="img/photo-hare-desktop@2x.jpg 2x,
+                                img/photo-hare-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)"
+                        srcset="img/photo-hare-tablet@1x.jpg 334w,
+                                img/photo-hare-tablet@2x.jpg 668w"
+                        sizes="(max-width: 999px) 40.7vw, 450px">
+                        <!-- 1x отдается при ширине вьюпорта до 820px: 820*0.407 = 334 px (ширина изображения - [820 - 50*2]/2 = 360px). По идее можно сразу отдавать 2x, так как графика подготовлена 1x -  334px, для резины не хватает -->
+                <img class="product__photo-img"
+                    src="img/photo-hare-mobile@1x.jpg"
+                    srcset="img/photo-hare-mobile@1x.jpg 260w,
+                            img/photo-hare-mobile@2x.jpg 520w"
+                    sizes="(max-width: 559px) 72.2vw, 500px"
+                    alt="Вязаный зайчик антропоморфного типа">
+                    <!-- 1x отдается при ширине вьюпорта до 360px: 360*0.722 = 260 px (ширина изображения - 360 - 30*2 = 300px). По идее можно сразу отдавать 2x, так как графика подготовлена 1x -  260px, для резины не хватает -->
+              </picture>
             </a>
             <div class="product__description">
               <h3 class="product__name">
@@ -141,7 +157,21 @@
           </li>
           <li class="products__item product">
             <a class="product__photo" href="#">
-              <img class="product__photo-img" src="img/photo-bowl-mobile@1x.jpg" alt="Вязаная корзинка для белья">
+              <picture>
+                <source media="(min-width: 1150px)"
+                        srcset="img/photo-bowl-desktop@2x.jpg 2x,
+                                img/photo-bowl-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)"
+                        srcset="img/photo-bowl-tablet@1x.jpg 334w,
+                                img/photo-bowl-tablet@2x.jpg 668w"
+                        sizes="(max-width: 999px) 40.7vw, 450px">
+                <img class="product__photo-img"
+                    src="img/photo-bowl-mobile@1x.jpg"
+                    srcset="img/photo-bowl-mobile@1x.jpg 260w,
+                            img/photo-bowl-mobile@2x.jpg 520w"
+                    sizes="(max-width: 559px) 72.2vw, 500px"
+                    alt="Вязаная корзинка для белья">
+              </picture>
             </a>
             <div class="product__description">
               <h3 class="product__name">
@@ -161,7 +191,21 @@
           </li>
           <li class="products__item product">
             <a class="product__photo" href="#">
-              <img class="product__photo-img" src="img/photo-toys-mobile@1x.jpg" alt="Вязаная большая корзинка для игрушек">
+              <picture>
+                <source media="(min-width: 1150px)"
+                        srcset="img/photo-toys-desktop@2x.jpg 2x,
+                                img/photo-toys-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)"
+                        srcset="img/photo-toys-tablet@1x.jpg 334w,
+                                img/photo-toys-tablet@2x.jpg 668w"
+                        sizes="(max-width: 999px) 40.7vw, 450px">
+                <img class="product__photo-img"
+                    src="img/photo-toys-mobile@1x.jpg"
+                    srcset="img/photo-toys-mobile@1x.jpg 260w,
+                            img/photo-toys-mobile@2x.jpg 520w"
+                    sizes="(max-width: 559px) 72.2vw, 500px"
+                    alt="Вязаная большая корзинка для игрушек">
+              </picture>
             </a>
             <div class="product__description">
               <h3 class="product__name">
