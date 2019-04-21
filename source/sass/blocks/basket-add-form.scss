@@ -1,3 +1,11 @@
+.basket-add-form {
+  &--error {
+    .basket-add-form__options-list {
+      animation: shake 0.4s;
+    }
+  }
+}
+
 .basket-add-form__options-list {
   display: flex;
   flex-wrap: wrap;
