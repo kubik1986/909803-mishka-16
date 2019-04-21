@@ -382,7 +382,7 @@
       <section class="basket-add" role="dialog" aria-labelledby="basket-add-label" aria-describedby="basket-add-description">
         <h2 class="basket-add__title" id="basket-add-label">Добавить в корзину</h2>
         <p class="basket-add__description" id="basket-add-description">Выберите размер:</p>
-        <form class="basket-add-form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="basket-add-form" method="post" action="https://echo.htmlacademy.ru"> <!-- basket-add-form--error -->
           <div class="basket-add-form__options-list">
             <label class="basket-add-form__options-item">
               <input class="visually-hidden basket-add-form__control" type="checkbox" name="size" value="S" checked>
@@ -400,11 +400,12 @@
           <button class="basket-add-form__submit-btn btn btn--solid" type="submit">Добавить</button>
         </form>
         <!-- кнопка "закрыть" для доступности -->
-        <button class="basket-add-form__close-btn visually-hidden visually-hidden--focusable" type="button" aria-label="Закрыть"></button>
+        <button class="basket-add__close-btn visually-hidden visually-hidden--focusable" type="button" aria-label="Закрыть"></button>
       </section>
     </div>
 
     <script src="js/mobile-menu.js"></script>
+    <script src="js/add-to-basket.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=63545e90-a23a-40ca-abd1-d26e11f81217&lang=ru_RU" type="text/javascript"></script>
     <script src="js/map.js"></script>
   </body>
