@@ -46,6 +46,8 @@
       }
     }
   }
+
+  @include fix-ie-active;
 }
 
 .user-menu__icon {
@@ -83,6 +85,13 @@
 
     padding: 32px;
     min-height: 88px;
+
+    // Фикс вертикального центрирования флекс-элемента при min-height в IE
+    &::before {
+      content: "";
+      min-height: 24px;
+      font-size: 0;
+    }
   }
 
   .user-menu__icon {

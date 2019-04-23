@@ -16,6 +16,8 @@
 }
 
 .main-nav__logo {
+  position: relative;
+
   display: block;
   margin: 0 auto;
   width: 86px;
@@ -42,6 +44,8 @@
       }
     }
   }
+
+  @include fix-ie-active;
 }
 
 .main-nav__logo-img {

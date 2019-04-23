@@ -8,6 +8,8 @@
 }
 
 .page-footer__logo {
+  position: relative;
+
   display: none;
   width: 102px;
   height: 34px;
@@ -34,6 +36,8 @@
       }
     }
   }
+
+  @include fix-ie-active;
 }
 
 .page-footer__item {
