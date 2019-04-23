@@ -67,6 +67,8 @@
 }
 
 .product__buy-btn {
+  position: relative;
+
   margin-left: auto;
 
   &:hover,
@@ -82,6 +84,8 @@
       opacity: 0.3;
     }
   }
+
+  @include fix-ie-active;
 }
 
 .product__buy-btn-icon {

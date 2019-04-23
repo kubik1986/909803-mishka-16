@@ -39,6 +39,8 @@
       opacity: 0.3;
     }
   }
+
+  @include fix-ie-active;
 }
 
 .category__text {

@@ -19,6 +19,8 @@
 }
 
 .social__link {
+  position: relative;
+
   &:hover,
   &:focus {
     .social__icon {
@@ -31,4 +33,6 @@
       opacity: 0.3;
     }
   }
+
+  @include fix-ie-active;
 }

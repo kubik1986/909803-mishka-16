@@ -207,7 +207,8 @@
   border-bottom: 2px solid $font-color-dark;
 
   &::placeholder {
-    opacity: 0.3;
+    color: rgba($font-color, 0.3);
+    opacity: 1;
   }
 
   &:hover,

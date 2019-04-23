@@ -23,6 +23,8 @@ $btn-height: 77px;
       outline: none;
     }
   }
+
+  @include fix-ie-active;
 }
 
 .video__media {

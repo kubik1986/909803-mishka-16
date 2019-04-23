@@ -16,11 +16,13 @@
   box-shadow: inset 0 0 0 1px $theme-color-complementary-light;
 
   &:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px $theme-color-complementary-light,
+      0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px $theme-color-complementary-light,
+      0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
