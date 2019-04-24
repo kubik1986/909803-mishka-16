@@ -12,9 +12,12 @@ ymaps.ready(init);
 
 function init() {
   var myMap = new ymaps.Map('map', {
-    center: [59.938631, 30.323055],
+    center: [59.938780, 30.323055],
     zoom: 17,
     controls: ['zoomControl', 'fullscreenControl']
+  },
+  {
+    suppressMapOpenBlock: true
   });
   myMap.behaviors.disable(['scrollZoom']);
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
