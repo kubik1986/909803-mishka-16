@@ -18,9 +18,9 @@
     background-size: 575px auto;
 
     .page-main__title {
-      margin-bottom: 50px;
-      padding: 0 $padding-mobile;
+      margin: 0 auto 50px auto;
       min-height: 162px;
+      width: 260px;
     }
 
     @media #{$retina} {
@@ -67,8 +67,8 @@
 
       .page-main__title {
         margin-bottom: 80px;
-        padding: 0;
         min-height: 393px;
+        width: 650px;
       }
 
       @media #{$retina} {
