@@ -2,24 +2,29 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 
-  margin: 0;
   padding-right: 0;
   padding-left: 0;
   list-style: none;
 }
 
 .social__item {
-  margin-top: 5px;
-
-  &:not(:last-child) {
-    margin-right: 40px;
-  }
+  padding: 0 5px;
 }
 
 .social__link {
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 52px;
+  height: 40px;
+
+  &--narrow {
+    width: 45px;
+  }
 
   &:hover,
   &:focus {
