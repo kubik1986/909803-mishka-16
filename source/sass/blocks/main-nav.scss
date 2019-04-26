@@ -86,14 +86,14 @@
     &--opened {
       .main-nav__toggle {
         display: block;
-        background-image: url("../img/icon-menu-close.svg");
+        background-image: url("../img/menu-close.svg");
       }
     }
 
     &--closed {
       .main-nav__toggle {
         display: block;
-        background-image: url("../img/icon-menu-open.svg");
+        background-image: url("../img/menu-open.svg");
       }
 
       .main-nav__site-menu,

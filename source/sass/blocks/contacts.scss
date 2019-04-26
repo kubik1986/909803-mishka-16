@@ -62,13 +62,13 @@
   height: 457px;
 
   background-color: #f4ead8;
-  background-image: url("../img/map-mobile@1x.jpg");
+  background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   @media #{$retina} {
-    background-image: url("../img/map-mobile@2x.jpg");
+    background-image: url("../img/bg-map-mobile@2x.jpg");
   }
 }
 
@@ -110,7 +110,7 @@
         height: 81px;
         content: "";
 
-        background-image: url("../img/icon-flag.svg");
+        background-image: url("../img/flag.svg");
         background-repeat: no-repeat;
         background-position: center center;
       }
@@ -158,10 +158,10 @@
   .contacts__map {
     margin-bottom: 55px;
 
-    background-image: url("../img/map-tablet@1x.jpg");
+    background-image: url("../img/bg-map-tablet@1x.jpg");
 
     @media #{$retina} {
-      background-image: url("../img/map-tablet@2x.jpg");
+      background-image: url("../img/bg-map-tablet@2x.jpg");
     }
   }
 }
@@ -225,10 +225,10 @@
     width: 525px;
     height: calc(100% - 71px - 105px);
 
-    background-image: url("../img/map-desktop@1x.jpg");
+    background-image: url("../img/bg-map-desktop@1x.jpg");
 
     @media #{$retina} {
-      background-image: url("../img/map-desktop@2x.jpg");
+      background-image: url("../img/bg-map-desktop@2x.jpg");
     }
   }
 }
