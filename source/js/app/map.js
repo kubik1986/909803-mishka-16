@@ -2,9 +2,10 @@ var mapHeightMobile = 457;
 var minPadding = 40;  // отступ, необходимый для возможности прокрутки карты на устройстве
 var clientHeight = document.documentElement.clientHeight;
 var map = document.querySelector('.contacts__map');
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // Проверка условия, что карта не занимает по высоте весь экран. При необходимости высота карты уменьшается для возможности ее свободной прокрутки
-if (clientHeight < mapHeightMobile + minPadding * 2) {
+if (isMobile && clientHeight < mapHeightMobile + minPadding * 2) {
   mapHeightMobile = (clientHeight - minPadding * 2) + 'px'
   map.style.height = mapHeightMobile;
 }
@@ -21,7 +22,7 @@ function init() {
     suppressMapOpenBlock: true
   });
   myMap.behaviors.disable(['scrollZoom']);
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (isMobile) {
     myMap.behaviors.disable('drag');
   }
 
