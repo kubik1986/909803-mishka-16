@@ -90,13 +90,13 @@
     border-right: none;
 
     &::before {
-      background-image: url("../img/icon-left-arrow.svg");
+      background-image: url("../img/left-arrow.svg");
     }
   }
 
   &--next {
     &::before {
-      background-image: url("../img/icon-right-arrow.svg");
+      background-image: url("../img/right-arrow.svg");
     }
   }
 }
@@ -116,13 +116,13 @@
     padding-bottom: 84px;
     min-height: 541px;
 
-    background-image: url("../img/review@1x.jpg");
+    background-image: url("../img/bg-review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 350px auto;
 
     @media #{$retina} {
-      background-image: url("../img/review@2x.jpg");
+      background-image: url("../img/bg-review@2x.jpg");
     }
   }
 
