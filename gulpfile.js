@@ -12,6 +12,7 @@ var include = require("posthtml-include");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var order = require("gulp-order");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
@@ -88,6 +89,10 @@ gulp.task("css", function () {
 
 gulp.task("js-concat", function () {
   return gulp.src("source/js/modules/**/*.js")
+    .pipe(order([
+      "fix-ie-min-height.js",
+      "*.js"
+    ]))
     .pipe(concat("app.js"))
     .pipe(gulp.dest("source/js"));
 });
