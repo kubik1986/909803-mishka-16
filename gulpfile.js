@@ -9,6 +9,7 @@ var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
@@ -66,6 +67,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin(
+      {collapseWhitespace: true}
+    ))
     .pipe(gulp.dest("build"));
 })
 
