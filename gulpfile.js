@@ -9,9 +9,12 @@ var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var order = require("gulp-order");
+var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var del = require("del");
@@ -64,6 +67,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin(
+      {collapseWhitespace: true}
+    ))
     .pipe(gulp.dest("build"));
 })
 
@@ -85,14 +91,29 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("js", function () {
-  return gulp.src("source/js/**/*.js")
+gulp.task("js-concat", function () {
+  return gulp.src("source/js/modules/**/*.js")
+    .pipe(order([
+      "fix-ie-min-height.js",
+      "*.js"
+    ]))
+    .pipe(concat("app.js"))
+    .pipe(gulp.dest("source/js"));
+});
+
+gulp.task("js-min", function () {
+  return gulp.src([
+    "source/js/app.js",
+    "source/js/lib/**/*.js"
+  ])
     .pipe(uglify())
     .pipe(rename(function (path) {
       path.basename += ".min";
     }))
     .pipe(gulp.dest("build/js"));
 });
+
+gulp.task("js", gulp.series("js-concat", "js-min"));
 
 gulp.task("copy", function () {
   return gulp.src([
@@ -118,7 +139,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/js/**/*.js", gulp.series("js", "reload"));
+  gulp.watch(["source/js/modules/**/*.js","source/js/lib/**/*.js"], gulp.series("js", "reload"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "reload"));
   gulp.watch("source/*.html", gulp.series("html", "reload"));
 });

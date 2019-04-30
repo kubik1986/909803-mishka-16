@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+    <link rel="dns-prefetch" href="//api-maps.yandex.ru">
     <link  href="css/style.min.css" rel="stylesheet">
     <title>«Мишка» - магазин вязаных изделий ручной работы</title>
-    <script src="js/lib/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none;">
@@ -310,10 +313,8 @@
       </section>
     </div>
 
-    <script src="js/app/fix-ie-min-height.min.js"></script>
-    <script src="js/app/mobile-menu.min.js"></script>
-    <script src="js/app/add-to-basket.min.js"></script>
+    <script src="js/picturefill.min.js" async></script>
     <script src="https://api-maps.yandex.ru/2.1.73/?apikey=63545e90-a23a-40ca-abd1-d26e11f81217&lang=ru_RU"></script>
-    <script src="js/app/map.min.js"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

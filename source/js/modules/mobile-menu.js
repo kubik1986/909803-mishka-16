@@ -1,3 +1,5 @@
+/* ----- Скрипт открытия/закрытия меню на мобильных ----- */
+
 var navMain = document.querySelector('.main-nav');
 var navToggle = navMain.querySelector('.main-nav__toggle');
 var navToggleText = navToggle.children[0];
