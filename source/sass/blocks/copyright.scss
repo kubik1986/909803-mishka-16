@@ -1,9 +1,27 @@
 .copyright {
+  @include font(19px, 19px, 700);
+}
+
+.copyright__link {
+  position: relative;
+
   display: flex;
   justify-content: center;
 
-  @include font(19px, 19px, 700);
   color: $font-color-dark;
+
+  &:hover,
+  &:focus {
+    .copyright__logo {
+      fill: $theme-color-secondary-bright;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include fix-ie-active;
 }
 
 .copyright__text {
@@ -12,27 +30,10 @@
 }
 
 .copyright__logo {
-  position: relative;
-
   display: block;
   margin-top: 2px;
   width: 27px;
   height: 34px;
 
   fill: $theme-color-main;
-
-  &:hover,
-  &:focus {
-    .copyright__logo-img {
-      fill: $theme-color-secondary-bright;
-    }
-  }
-
-  &:active {
-    .copyright__logo-img {
-      opacity: 0.3;
-    }
-  }
-
-  @include fix-ie-active;
 }
