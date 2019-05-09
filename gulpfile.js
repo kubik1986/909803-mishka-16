@@ -18,6 +18,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var del = require('del');
+var ghPages = require('gh-pages');
 var server = require('browser-sync').create();
 
 gulp.task('imagemin', function () {
@@ -159,3 +160,7 @@ gulp.task('build', gulp.series(
 ));
 
 gulp.task('start', gulp.series('build', 'server'));
+
+gulp.task('deploy', function (cb) {
+  ghPages.publish('build', cb);
+});
