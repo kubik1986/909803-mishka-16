@@ -3,6 +3,7 @@
 var modalOverlay = document.querySelector('.modal-overlay');
 
 if (modalOverlay) {
+  var body = document.querySelector('body');
   var popup = modalOverlay.querySelector('.basket-add');
   var popupForm = popup.querySelector('.basket-add-form');
   var popupOpenBtns = document.querySelectorAll('.product-full__buy-btn, .product__buy-btn');
@@ -15,41 +16,52 @@ if (modalOverlay) {
     'Esc': 27
   };
 
-  var addOpenBtnHandler = function(openBtn) {
-    openBtn.addEventListener('click', function(evt) {
+  var onModalEscPress = function (evt) {
+    if (evt.keyCode === keys['Esc']) {
       evt.preventDefault();
-      popupOpenBtnCurrent = openBtn;
-      popupForm.classList.remove('basket-add-form--error');
-      modalOverlay.classList.add('modal-overlay--show');
-      popupFirstInput.focus();
-
-      window.addEventListener('keydown', function(evtEsc) {
-        if (evtEsc.keyCode === keys['Esc']) {
-          evtEsc.preventDefault();
-          modalOverlay.classList.remove('modal-overlay--show');
-          popupOpenBtnCurrent.focus();
-        }
-      });
-
-      window.addEventListener('click', function(evtClick) {
-        if (evtClick.target === modalOverlay) {
-          evtClick.preventDefault();
-          modalOverlay.classList.remove('modal-overlay--show');
-          popupOpenBtnCurrent.focus();
-        }
-      });
-    });
+      closeModal();
+    }
   };
 
-  for (var i = 0; i < popupOpenBtns.length; i++) {
-    addOpenBtnHandler(popupOpenBtns[i]);
-  }
+  var onModalClick = function (evt) {
+    if (evt.target === modalOverlay) {
+      evt.preventDefault();
+      closeModal();
+    }
+  };
 
-  popupCloseBtn.addEventListener('click', function(evt) {
+  var onPopupOpenBtnClick = function (evt) {
     evt.preventDefault();
+    popupOpenBtnCurrent = evt.currentTarget;
+    openModal();
+  };
+
+  var openModal = function (evt) {
+    if (popupForm.classList.contains('basket-add-form--error')) {
+      popupForm.classList.remove('basket-add-form--error');
+    }
+    modalOverlay.classList.add('modal-overlay--show');
+    body.classList.add('modal-opened');
+    popupFirstInput.focus();
+
+    document.addEventListener('keydown', onModalEscPress);
+    document.addEventListener('click', onModalClick);
+  };
+
+  var closeModal = function () {
+    body.classList.remove('modal-opened');
     modalOverlay.classList.remove('modal-overlay--show');
     popupOpenBtnCurrent.focus();
+
+    document.removeEventListener('keydown', onModalEscPress);
+    document.removeEventListener('click', onModalClick);
+  };
+
+  popupOpenBtns.forEach(function (btn) {
+    btn.addEventListener('click', onPopupOpenBtnClick);
   });
+
+  popupCloseBtn.addEventListener('click', closeModal);
 
   popupCloseBtn.addEventListener('keydown', function(evt) {
     if (evt.keyCode === keys['Tab'] && !evt.shiftKey) {

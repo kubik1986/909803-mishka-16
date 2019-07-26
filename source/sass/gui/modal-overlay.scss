@@ -17,3 +17,9 @@
 .modal-overlay--show {
   display: flex;
 }
+
+// Стили <body> при открытом модальном окне
+.modal-opened {
+  height: 100vh;
+  overflow: hidden;
+}
