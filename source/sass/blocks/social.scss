@@ -41,3 +41,7 @@
 
   @include fix-ie-active;
 }
+
+.social__icon {
+  transition: all 0.3s;
+}

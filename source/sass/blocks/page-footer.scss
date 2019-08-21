@@ -40,6 +40,10 @@
   @include fix-ie-active;
 }
 
+.page-footer__logo-img {
+  transition: all 0.3s;
+}
+
 .page-footer__item {
   padding: 20px 0;
   min-height: 80px;
